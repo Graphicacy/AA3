@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="masthead">
+	<div class="centeredContent mastheadContent">	
+		<a class="extra" href="index.cfm">
+			<img class="logo" id="mainLogo" src="img/logo.jpg" alt="">
+		</a>
+
+		<h1 id="mainTitle">National</h1>
+		<div id="topTenRibbon"></div>
+		
+		{% include social-shares.html %}
+		
+		<p class="mainText originalMainText"><em>America After 3PM</em> spans a decade of data chronicling how children spend the hours between 3 and 6 p.m. &mdash; the hours after school ends and before parents typically return home from work. <span class="originalParagraphEnd">It highlights the trends of afterschool program participation, documents the benefits associated with participation in afterschool programs and measures public support for afterschool programs.</span><span class="hepaParagraphEnd">Learn more about parents’ expectations of afterschool programs when it comes to health and wellness, satisfaction with the food and physical activity in programs, and how afterschool programs are helping to improve the health and physical fitness of our nation’s students.</span><span class="summerParagraphEnd"><em>America After 3PM</em> summer learning data build on what we know about learning opportunities children have during the out-of-school hours. Examine summer learning program participation rates, demand for summer learning programs and support for public funding of summer learning programs.</span><span class="stemParagraphEnd">Learn more about parents&rsquo; expectations of afterschool programs when it comes to science, technology, engineering, and math (STEM) learning opportunities in programs, and how afterschool programs are satisfying parent demand for afterschool STEM programming.</span></p>
+	</div>
+</div>
+
+{% include masthead-nav.html %}
+
+<div class="content centeredContent">
+	{{ content }}
+	<div class="clearfix"></div>
+</div>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style type="text/css">
+		p {
+			margin: 0;
+		}
+
+	</style>
+
+	<script src="d3.js"></script>
+
+
+	<script>
+
+	d3.csv('demographics-text-input.csv', function (d) {
+			return {
+				name: d['column 1'],
+				value: d['column 2'],
+				state: d.state
+			}
+		}, 
+
+		function (error, data) {
+			// Clear body
+			d3.select('body').html('')
+
+			// Print column headers line
+			printCSVLine('slug', 'state', 'place', 'text')
+
+
+			// Parsing helpers
+			var lastState = 'AL';
+			var index = 0;
+			var currentState = 'AL';
+
+			// Printing helpers
+			function printCSVLineForSTATE(slug, place, text) {
+				printCSVLine(slug, currentState, place, text)
+			}
+
+			function printCSVLine(slug, state, place, text) {
+				function insertComma() { p.append('span').text(',')  }
+				function insertVal(val) { p.append('span').text('"' + val + '"') }
+
+				var p = d3.select('body').append('p')
+					
+				insertVal(slug)
+				insertComma()
+				insertVal(state)
+				insertComma()
+				insertVal(place)
+				insertComma()
+				insertVal(text)
+			}
+
+
+			// Begin parsing
+			for (d in data) {
+				// IIFE > if()'s mimicking case switch with more complex logic
+				(function () {
+					var datum = data[d];
+					var name = datum.name;
+					var value = datum.value;
+
+					currentState = datum.state;
+
+					if (currentState != lastState) {
+						lastState = currentState;
+						index = 0;
+					}
+				
+					if (name == '' || 
+						name == 'State Intro' ||
+						name == '\n') {
+						// Do nothing, emptiness
+						return
+					}
+// BEGIN DEMAND SECTION 1
+					// Extra check because names are exactly the same
+					if (name == 'Card 1' && index == 2) {
+					
+						printCSVLineForSTATE('p_of_children_in_programs_', 'title', value)
+						return; 
+					}
+
+					if (name == 'Card 1 Info\n\n\nNew - Card 2\nNew – Card 2\n') {
+						var arr = value.split('\n\n')
+
+						printCSVLineForSTATE('p_of_children_in_programs_', 'text', arr[0])
+
+						printCSVLineForSTATE('avg_hr_per_week_in_programs', 'title', arr[1])
+
+						printCSVLineForSTATE('avg_hr_per_week_in_programs', 'text', arr[2])
+
+
+						return; 
+					}
+
+					if (name == 'Card 3\nCard 3 Info') {
+						var arr = value.split('\n')
+
+						printCSVLineForSTATE('p_of_children_in_programs_2014_', 'title', arr[0])
+
+						printCSVLineForSTATE('p_of_children_in_programs_2014_', 'text', arr[1])
+
+
+						return; 
+					}
+
+					if (name == '\nCard 4') {
+						printCSVLineForSTATE('p_of_boys_program', 'title', value)
+
+
+						return; 
+					}
+
+					if (name == '\nCard 5\nCard 5 Info') {
+						var arr = value.split('\n')
+
+						arr.shift() // Discard empty first element
+
+						printCSVLineForSTATE('avg_dolllars_spent_per_week_program', 'title', arr[0])
+
+						printCSVLineForSTATE('avg_dolllars_spent_per_week_program', 'text', arr[1])
+
+
+						return; 
+					}
+/* NO TEXT CARD DEM 1 for demographics. Check how this affects index
+					if (name == '\nTEXT CARD') {
+						var arr = value.split('\n')
+
+						arr.shift() // Discard empty first element
+
+						printCSVLineForSTATE('just_text_demand_children_in_afterschool', 'text', arr[0])
+
+
+						return; 
+					}*/
+// BEGIN DEMAND SECTION 2
+
+					if (name == 'Card 1\nCard 1 - Info\n\nCard 2') {
+						var arr = value.split('\n')
+
+						printCSVLineForSTATE('p_of_children_would_be_enrolled_', 'title', arr[0])
+
+						printCSVLineForSTATE('p_of_children_would_be_enrolled_', 'text', arr[1])
+
+						// skip arr[2], empty
+
+						printCSVLineForSTATE('p_of_children_alone_', 'title', arr[3])
+
+
+						return; 
+					}
+
+					if (name == 'Card 2 – Info\n\nCard 3\nCard 3 -Info\n') {
+						var arr = value.split('\n')
+
+						printCSVLineForSTATE('p_of_children_alone_', 'text', arr[0])
+
+						// skip arr[1], empty
+
+						printCSVLineForSTATE('avg_hr_per_week_alone', 'title', arr[2])
+
+						printCSVLineForSTATE('avg_hr_per_week_alone', 'text', arr[3])
+
+
+						return; 
+					}
+
+					if (name == 'Card 4') {
+
+						printCSVLineForSTATE('p_of_children_alone_2014_', 'title', value)
+
+
+						return; 
+					}
+
+					if (name == 'Card 4 - Info') {
+
+						printCSVLineForSTATE('p_of_children_alone_2014_', 'text', value)
+
+
+						return; 
+					}
+
+					if (name == '\nTEXT CARD TITLE') {
+
+						printCSVLineForSTATE('just_text_demand_unmet', 'title', value);
+
+
+						return; 
+					}
+
+					if (name == 'TEXT CARD INFO') {
+						var arr = value.split('\n')
+
+						var blankIndex = arr.indexOf('') - 1;
+
+						var text = arr.shift();
+
+						text = text + "<ul><li>" + arr.splice(0, blankIndex).join('</li><li>') + "</li></ul>";
+
+						printCSVLineForSTATE('just_text_demand_unmet', 'text', text)
+
+
+						return; 
+					}
+// BEGIN BENEFITS
+					if (name == 'Card 1' && index < 20) {
+
+						printCSVLineForSTATE('p_of_parents_satisfied_child_program_', 'title', value)
+
+						return
+					}
+
+					if (name == 'Card 1 –Info ') {
+						printCSVLineForSTATE('p_of_parents_satisfied_child_program_', 'text', value)
+
+						return
+					}
+
+					if (name == '\nCard 2') {
+						printCSVLineForSTATE('ans_1_select_program', 'title', value)
+
+						return
+					}
+
+					if (name == 'Card 2 – Info ' && index < 20) {
+						var arr = value.split('\n')
+
+						printCSVLineForSTATE('ans_1_select_program', 'text', "<ul><li>" + arr.join('</li><li>') + "</li></ul>")
+
+						return
+					}
+
+					if (name == '\nCard 3\nCard 3 – Info \n\n\nCard 4') {
+						var arr = value.split('\n')
+
+						arr.shift() // Discard empty first element
+
+						var last = arr.pop();
+
+						// Discard final blank
+						arr.pop();
+
+						printCSVLineForSTATE('ans_1_type_activity', 'title', arr.shift())
+
+						printCSVLineForSTATE('ans_1_type_activity', 'text', "<ul><li>" + arr.join('</li><li>') + "</li></ul>")
+
+						printCSVLineForSTATE('p_of_parents_satisfied_program_safe', 'title', last)
+
+						return;
+					}
+
+					if (name == 'Card 5') {
+						printCSVLineForSTATE('p_of_parents_satisfied_program_quality_of_care', 'title', value)
+
+						return;
+					}
+
+					if (name == 'Card 6') {
+						printCSVLineForSTATE('ans_1_program_provider', 'title', value)
+
+						return;
+					}
+					// Note: Card 7 erroneously called Card 6 here - public school bldg
+					// CORRECTED IN DEMOGRAPHICS
+					if (name == 'Card 6 – TEXT\n\n\nCard 7') {
+						var arr = value.split('\n')
+
+						var without_numbers = arr.slice(0, 3).map(function (d) {
+							return d.match(/\d\. (.*)/)[1]
+						})
+
+						
+						without_numbers = without_numbers.map(function (d) {
+							d = d.replace('Afterschool programs run by a ', '')
+							d = d.replace(' afterschool program', '')
+
+							// Cap first letter.
+							d = d[0].toUpperCase() + d.substr(1, d.length)
+
+							return d;
+						})
+
+						printCSVLineForSTATE('ans_1_program_provider', 'text', "<ol><li>" + without_numbers.join('</li><li>') + "</li></ol>")
+
+						printCSVLineForSTATE('p_of_parents_program_public_school_bldg', 'text', arr[4])
+
+						return;
+					}
+// BEGIN SUPPORT
+					if (name == 'Card 1' && index > 20) {
+
+						printCSVLineForSTATE('p_of_parents_programs_excite_abt_learning', 'title', value)
+
+						return
+					}
+
+					if (name == 'Card 2') {
+
+						printCSVLineForSTATE('p_of_parents_programs_help_child_gain_skills', 'title', value)
+
+						return
+					}
+
+					if (name == 'Card 2 – Info ') {
+						var arr = value.split('\n')
+
+						printCSVLineForSTATE('p_of_parents_programs_help_child_gain_skills', 'text', value)
+
+						return
+					}
+
+					if (name == 'Card 3') { 
+						printCSVLineForSTATE('p_of_parents_programs_reduce_risky', 'title', value)
+
+						return
+					}
+
+					if (name == 'Card 3 – Info ') {
+						printCSVLineForSTATE('p_of_parents_programs_reduce_risky', 'text', value)
+
+						return
+					}
+
+/* No Working parentspeace supp for demographics					if (name == 'Card 4 – Info \n') {
+
+						printCSVLineForSTATE('p_of_parents_working_parents_peace', 'text', value)
+
+						return
+					}
+*/
+	
+					if (name == 'Card 4 – Info \n') {
+						printCSVLineForSTATE('p_of_parents_support_public_funding_2014', 'text', value)
+
+						return;
+					}
+
+					if (name == 'FOOTNOTE') {
+						printCSVLineForSTATE('FOOTNOTE', 'text', value)
+
+						return;
+					}
+
+					console.error('WARNING: NO MATCHING PARSER')
+					console.log(datum)
+					debugger;
+				})()
+
+
+				index++;
+			}
+		});
+	</script>
+
+</head>
+<body>
+	
+</body>
+</html>

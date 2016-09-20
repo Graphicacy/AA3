@@ -1,0 +1,42 @@
+---
+layout: page
+title: America After 3PM
+---
+
+<!-- build:css(app) css/main2.css -->
+<link rel="stylesheet" href="css/detail.css">
+<!-- endbuild -->
+
+<div id="detail">
+	<div class="background-fill"></div>
+		<div id="cardsWrapper"></div>
+		<hr>
+		<h3>Footnotes</h3>
+		<div id="footnoteHolder"></div>
+	</div>
+
+	<!-- Begin templates -->
+	<script type="text/template" id="cardsView-sectionTemplate">
+	<div class="cardSection <%= category %>-section">
+		<hr>
+		<div class="cardSectionHeader" ><%= title || 'Title Error' %>
+			<button class="section-accordion">-</button>
+		</div>
+
+		<div class="cardSectionBody"></div>
+		
+	</div>
+	<div class="clearfix"></div>
+	<div class="end-spacer"></div>
+	</script>
+	<script type="text/template" id="cardsView-cardTemplate">
+	<div class="card">
+		<% if (title) { %>
+			<div class="cardHeader"><%= title %></div>
+		<% } %>
+
+		<div class="cardBody"></div>
+	</div>
+	</script>
+	<!-- End templates -->
+

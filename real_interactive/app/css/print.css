@@ -1,0 +1,42 @@
+
+/*****************************************************************************/
+/*
+/* Printed style
+/*
+/*****************************************************************************/
+
+/* Weird print hacks... */
+html * {
+    float: none
+}
+
+body {
+    overflow: visible
+}
+
+.demandActiveCategory .fillByCategory.demandCategory {
+    color: #000;
+    font-weight: 700
+}
+
+.more {
+    display: inherit
+}
+
+.optionBar {
+    display: none
+}
+
+.pagebreakBefore {
+    display: block;
+    page-break-before: always
+}
+
+#questionsWrapper {
+    overflow: visible
+}
+
+#national .rightColumn {
+    float: none;
+    display: inline-block
+}

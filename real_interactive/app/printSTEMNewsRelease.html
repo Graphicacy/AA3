@@ -1,0 +1,100 @@
+---
+layout: print
+title: America After 3PM
+---
+
+
+<div id="detail">
+  <div class="masthead printMasthead">
+    <div class="centeredContent mastheadContent"> 
+      <a class="extra" href="index.cfm">
+
+        <img class="logo" id="mainLogo" src="img/logo-stem.png" alt="">
+      </a>
+
+      <h1 class="mainTitle"><span class="stateName">New Mexico</span> After 3PM:</h1>
+      <h2><em>Full STEM Ahead</em></h2>
+      <div id="topTenRibbon"></div>
+
+      <p class="mainIntroText"></p>
+    </div>
+  </div>
+
+  <div class="content centeredContent printContent">
+    <div class="cardsWrapper firstHalfCards"></div>
+    <div class="clearfix"></div>
+  </div>
+
+
+  <div class="firstPageFooter pageFooter">
+    <img src="img/aalogo.svg" alt="Afterschool Alliance">
+  </div>
+
+  <div class="pagebreakBefore"></div>
+
+  <div class="spacer-above-logo"></div>
+  <div class="masthead printMasthead">
+    <div class="centeredContent mastheadContent"> 
+      <a class="extra" href="index.cfm">
+        <img class="logo" id="mainLogo" src="img/logo-stem.png" alt="">
+      </a>
+
+      <h1 class="mainTitle"><span class="stateName">New Mexico</span> After 3PM:</h1>
+      <h2><em>Full STEM Ahead</em></h2>
+      <div id="topTenRibbon"></div>
+    </div>
+  </div>
+
+  <div class="content centeredContent printContent">
+    <div class="cardsWrapper secondHalfCards"></div>
+    <div class="clearfix"></div>
+    <div class="finalCardsText">
+      <p>Afterschool STEM learning opportunities are essential to charge up student interest in STEM.  Ensuring that all children have access to afterschool programs will help ensure that everyone can participate in the modern economy and contribute to our shared prosperity.</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="secondPageFooter pageFooter">
+  </div>
+</div>
+
+<!-- Begin templates -->
+<script type="text/template" id="print-footnoteTemplate">
+<div class="stupid-line"></div>
+<h3>About the Survey</h3>
+
+<p>The percentages and projected numbers of children and families in America After 3PM are based on survey responses from parents. The Afterschool Alliance contracted with Shugoll Research to collect the data. Nationally, 30,720 households were screened, and 13,709 households completed in-depth interviews via an online survey using a blend of national consumer panels. At least 200 households completed interviews in every state and the District of Columbia, between Feb. 28 and April 17, 2014. <%= state_footnote %></p>
+
+<p>The Afterschool Alliance is a nonprofit public awareness and advocacy organization working to ensure that all children and youth have access to quality afterschool programs.</p>
+
+<p class="forAdditionalInformation">For additional information about <em>America After 3PM</em>, visit: <strong>WWW.AFTERSCHOOLALLIANCE.ORG/AA3PM.</strong></p>
+</script>
+
+<script type="text/template" id="print-introTemplate">
+Afterschool programs play a vital role in activating interest in science, technology, engineering and math (STEM) for our nation&rsquo;s students.  In <%= state_name %>, <%= projection_do_participate %> children participate in an afterschool program—and <%= projection_would_participate %> more children would be enrolled in a program if one were available to them. <em><%= state_name %> After 3PM: Full STEM Ahead</em> highlights some of the ways afterschool programs support students across the state in preparing for the future by offering kids STEM learning&nbsp;opportunities.
+</script>
+
+<script type="text/template" id="cardsView-sectionTemplate">
+  <div class="cardSection <%= category %>-section cardSectionNumber<%= index %>">
+    <hr>
+    <div class="cardSectionHeader" ><%= title || 'Title Error' %>
+    </div>
+
+    <div class="cardSectionBody"></div>
+    
+  </div>
+  <div class="clearfix"></div>
+  <div class="end-spacer"></div>
+</script>
+
+<script type="text/template" id="cardsView-cardTemplate">
+  <div class="card">
+    <% if (title) { %>
+      <div class="cardHeader"><%= title %></div>
+    <% } %>
+
+    <div class="cardBody"></div>
+  </div>
+</script>
+<!-- End templates -->
