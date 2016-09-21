@@ -1,0 +1,2187 @@
+
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+/*
+  BOOTSTRAP RESPONSIVE RESET
+ */
+body > .container {
+  width: 100% !important;
+}
+
+.dashboard-container {
+  min-width: 1024px;
+  overflow: hidden;
+  height: 100%;
+}
+
+
+/* Global Reset ---> Brought into .site because everything outside of site is subject to AA3's bootstrap template*/
+.site * {
+  margin: 0;
+  padding: 0;
+
+  /* Monkey patch the moz + bootstrap bug */
+  -moz-box-sizing: content-box !important;
+}
+
+.site html, .site { 
+  height: 100%;
+  color: #043D58;
+  /* Changed main site color per JK from color: #2c3e50; */
+}
+
+.site {
+  background-color: #FEFEFC;
+  font-size: small;
+  margin-top: 0;
+  font-family: Trebuchet MS;
+}
+
+
+.site h1, .site h2, .site h3, .site .site h4, .site h5, .site h6 {
+  font-size: 100%;
+}
+
+.site h1 { margin-bottom: 1em; }
+.site p { margin: 1em 0; }
+
+/* MONKEY PATCH FIREFOX PARAGRAPH PADDING FOR POPOVER OVERFLOW */
+.site .statesGroup p {
+  margin: 0;
+}
+
+.site a         { 
+  color: #00a;
+  text-decoration: none;
+}
+
+.site a:hover   { 
+  color: #000;
+  text-decoration: none;
+}
+
+.site a:visited { color: #a0a; }
+
+.site .clickable {
+  cursor: pointer;
+}
+
+.site .no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.site .clearfix {
+  clear: both;
+}
+
+.site a.clearfix {
+  display: block;
+}
+
+.site img {
+  vertical-align: middle;
+}
+
+/*****************************************************************************/
+/*
+/* Resetting Bootstrap Stuff
+/*
+/*****************************************************************************/
+.site * {
+  box-sizing: content-box;
+}
+
+
+/*****************************************************************************/
+/*
+/* Home
+/*
+/*****************************************************************************/
+
+/* OVERRIDING BOOTSTRAP COL PADDING */
+.col-xs-12.col-sm-12 {
+  padding: 0;
+}
+/* END OVERRIDING BOOTSTRAP COL PADDING */
+
+.benefits-box, .support-box {
+  float: left;
+  height: 245px;
+  width: 240px;
+}
+
+.benefits-box {
+  margin: 15px 15px;
+}
+
+.support-box {
+  margin: 15px 29px 15px 16px;
+}
+
+.benefits-box .box-top, .support-box .box-top {
+  font-size: 34px;
+  padding: 10px 0px 0px 15px;
+}
+
+.benefits-box h3, .support-box h3 {
+  margin-bottom: -13px;
+}
+
+.benefits-box .see-map, .support-box .see-map {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.benefits-box, .support-box, .demand-box {
+  background-color: #FEFCF3;
+  border: 1px solid #D5DBDB;
+  border-radius: 5px 5px;
+}
+
+.benefits-box p, .support-box p {
+  padding: 5px 10px 15px 15px;
+}
+
+
+
+.benefits-box .box-top {
+  background-color: #4EB7C9;
+}
+
+.box-top {
+  border-radius: 5px 5px 0 0;
+}
+
+a.box-top {
+  display: block;
+}
+
+.box-top h3 {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.support-box .box-top {
+  background-color: #2A78BF;
+}
+
+.clear {
+  clear: both;
+}
+
+.demand-box {
+  margin-bottom: -355px;
+  position: relative;
+  left:14px;
+  top: -385px;
+  width: 300px;
+  z-index: 2;
+}
+
+.demand-box .box-top {
+  background-color: #D15E91;
+  padding: 13px 4px;
+}
+
+.demand-box .see-map {
+  font-size: 26px;
+  margin-left: 15px;
+  text-transform: uppercase;
+}
+
+.demand-box h3 {
+  font-size: 42px;
+  padding-left: 15px;
+}
+
+
+.demand-box p {
+  padding: 10px 15px;
+}
+
+h3.download-headline {
+  font-size: 21px;
+  font-weight: bold;
+  margin-left: 7px;
+}
+
+h3.download-headline img {
+  margin: 0 4px 0 -2px;
+}
+
+.download-content {
+  margin-top: 12px;
+  padding-left: 26px;
+  width: 85%;
+  margin-bottom: 56px;
+}
+
+.color-box p {
+  margin: 1em 0;
+  padding-top: 0;
+}
+
+.find-resources {
+  padding-left: 31px;
+  padding-top: 7px;
+  float: left;
+  width: 500px;
+}
+
+.find-resources h3, .download-content h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.footer {
+  margin-top: 56px;
+}
+
+.download-links {
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.splash-content h3 strong {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.download-and-news {
+ margin-top: 14px;
+ padding-left: 6px;
+ border-left: 1px solid #d7d7d7;
+ height: 100%;
+}
+
+.find-resources li, .download-and-news li {
+  line-height: 26px;
+  list-style-type: none;
+  font-size: 15px;
+}
+
+.hidden-headline {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+#home {
+  margin: 0 auto;
+  width: 100%;
+}
+
+#home .shares {
+  right: 36px;
+}
+
+.site .home-logo {
+  vertical-align: top;
+  margin-top: 25px;
+  margin-right: 20px;
+  margin-left: 12px;
+  width: 155px;
+}
+
+#home .mainTitle {
+  font-size: 60px;
+  font-weight: lighter;
+  letter-spacing: -2px;
+  width: 688px;
+  line-height: 70px;
+  display: inline-block;
+}
+
+
+
+
+#home .navbar {
+  margin-bottom: 0;
+}
+
+.jump-menu {
+  width: 1024px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#homePageJumpToMenu {
+  float: left;
+  height: 30px;
+  position: absolute;
+  margin-left: 14px;
+  top: -15px;
+  width: 156px;
+  z-index: 2;
+}
+
+#home .jump-menu .custom-combobox {
+  top: 0;
+  left: 0;
+}
+
+#home a:link.see-map, #home a:visited.see-map, #home a:active.see-map, #home a:hover.see-map,
+#home span.see-map {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#home a:link, #home a:visited {
+  color: rgb(44, 62, 80);
+}
+
+.site h3.list-head {
+  margin-bottom: 5px;
+  text-transform: lowercase;
+  font-weight: bold;
+  font-size: 21px;
+  font-variant: small-caps;
+}
+
+#home ul {
+  margin-bottom: 10px;
+}
+
+
+.image-cozy-background {
+  border-top: 2px solid #E7EBEA;
+  border-bottom: 1px solid #D4D5D5;
+  background-color: #F9FAFB;
+  width: 100%;
+}
+
+.image-cozy {
+  width: 1024px;
+  height: 427px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.splash-content {
+  background-color: #fff;
+/*  background-image: url("../img/AA3-splash-page-v2.png");
+  background-repeat: no-repeat;*/
+  margin: 0 auto;
+  width: 1024px;
+}
+
+h3.label-headline {
+background: #fff4a7; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZjRhNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(left,  #fff4a7 0%, #ffffff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#fff4a7), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #fff4a7 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #fff4a7 0%,#ffffff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #fff4a7 0%,#ffffff 100%); /* IE10+ */
+background: linear-gradient(to right,  #fff4a7 0%,#ffffff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff4a7', endColorstr='#ffffff',GradientType=1 ); /* IE6-8 */
+padding: 5px;
+font-size: 14px;
+}
+
+.news {
+  margin-top: 20px;
+}
+
+.main-image {
+  position: relative;
+  right: -93px;
+}
+
+.splash-content p {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+.splash-masthead {
+  background-color: #fff;
+  height: 120px;
+  padding: 0 0 45px 5px;
+  margin: 0 auto;
+  width: 1024px;
+  position:relative;
+}
+
+.splash-masthead-background {
+  background-color: #fff;
+  width: 100%;
+}
+
+.splash-column {
+  padding-top: 8px;
+}
+
+.splash-column-left {
+  float: left;
+  height: 100%;
+  width: 55%;
+}
+
+.splash-column-right {
+  float: right;
+  height: 100%;
+  width: 45%;
+}
+
+.site .splash-column p {
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+/*****************************************************************************/
+/*
+/* Site
+/*
+/*****************************************************************************/
+
+/* Begin iPad Fix */
+/* Disabled temporarily for testing */
+/*.site {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .site {
+        min-height: 1240px;
+    }
+}
+*/
+/* End iPad Fix */
+
+.site .centeredContent {
+  background-color: #FEFEFC;
+  margin: 0 auto;
+  min-width: 970px;
+  width: 970px;
+  z-index: 1;
+  position: relative;
+}
+
+.site .content.centeredContent {
+  margin-bottom: 56px;
+}
+
+#national {
+  position: relative;
+}
+
+/*****************************************************************************/
+/*
+/* Masthead
+/*
+/*****************************************************************************/
+
+.factsheet {
+  margin-right: 17px;
+  text-align: right;
+}
+
+.logo {
+  float: left;
+  padding-top: 24px;
+  margin: 12px -150px 30px -6px;
+  width: 156px;
+}
+
+p.mainText {
+  font-size: 15px;
+  left: 168px;
+  line-height: 24px;
+  margin: 0.3em 0 1.6em 0;
+  position: relative;
+  width: 790px;
+  display: inline-block;
+  min-height: 120px;
+}
+
+/* Set up for the JS animation */
+p.mainText .hepaParagraphEnd,
+p.mainText .summerParagraphEnd,
+p.mainText .stemParagraphEnd {
+  display: none;
+  opacity: 0;
+}
+
+.masthead {
+  background-color: #fff;
+  border-bottom: 1px solid #D4D5D5;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+}
+
+.masthead>.centeredContent {
+  top: auto;
+  background-color: inherit;
+}
+
+.masthead h1 {
+  font-size: 60px;
+  font-weight: normal;
+  line-height: 1em;
+  margin: 0 0 0 166px;
+  max-width: 705px;
+  padding-top: 18px;
+  display: inline-block;
+}
+
+.shares {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.shares img {
+  margin-left: -10px;
+}
+
+/*****************************************************************************/
+/*
+/* General layout
+/*
+/*****************************************************************************/
+#national .columns {
+  margin-top: 10px;
+}
+
+#national .leftColumn{
+  width: 627px;
+  padding: 15px 15px 41px 15px;
+  float: left;
+}
+
+/* made this position absolute instead of floated to get container at full height */
+#national .rightColumn {
+  background: #EDF3F3;
+  border-color: #D8D9D8;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-radius: 3px;
+  padding: 15px 14px;
+  width: 281px;
+  position: absolute;
+  top: 78px;
+  bottom: 0;
+  left: 660px;
+}
+
+/*****************************************************************************/
+/*
+/* Maps
+/*
+/*****************************************************************************/
+#mapWrapper {
+  height: 420px;
+}
+
+#mapWrapper .chart {
+  float: left;
+	width: 540px;
+	height: 460px;
+}
+
+
+/* Begin Choropleth from http://bl.ocks.org/mbostock/2206590 */
+#mapWrapper .background {
+  fill: none;
+  pointer-events: all;
+}
+
+#mapWrapper #states {
+  fill: #aaa;
+}
+
+#mapWrapper #states .active {
+  fill: orange;
+}
+
+#mapWrapper .feature {
+  background-color: 3px;
+  pointer-events: visibleFill;
+}
+
+#mapWrapper #state-borders {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.5px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+#popover, #popover .background, #popover * {
+  pointer-events: none;
+}
+/* End choropleth from http://bl.ocks.org/mbostock/2206590 */
+
+/*****************************************************************************/
+/*
+/* Map Legend
+/*
+/*****************************************************************************/
+.posedText {
+  position: absolute;
+  top: 70px;
+  left: 160px;
+  width: 340px;
+  height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 16px;
+   /* Half of combobox dropdown list (needs to be between this dropdown list and the rest of the body)*/
+  z-index: 500;
+  font-family: 'Trebuchet MS';
+}
+
+.legend .maxText, .legend .minText {
+  font-size: 12px;
+}
+
+.legend .symbol {
+  font-size: 10px;
+}
+
+/*****************************************************************************/
+/*
+/* States Bar Chart
+/*
+/*****************************************************************************/
+#statesBarsWrapper .chart {
+	width: 960px;
+	height: 55px;
+}
+#statesBarsWrapper .backgroundRect {
+  pointer-events: all;
+}
+
+#statesBarsWrapper .state text {
+  font-size: 12px;
+  font-family: 'Inconsolata';
+}
+
+/* Begin Choropleth Taken from http://bl.ocks.org/mbostock/4060606 */
+.q0-9 { fill:rgb(247,251,255); }
+.q1-9 { fill:rgb(222,235,247); }
+.q2-9 { fill:rgb(198,219,239); }
+.q3-9 { fill:rgb(158,202,225); }
+.q4-9 { fill:rgb(107,174,214); }
+.q5-9 { fill:rgb(66,146,198); }
+.q6-9 { fill:rgb(33,113,181); }
+.q7-9 { fill:rgb(8,81,156); }
+.q8-9 { fill:rgb(8,48,107); }
+/* End Choropleth */
+
+/*****************************************************************************/
+/*
+/* Option Bar
+/*
+/*****************************************************************************/
+
+/* Category switching buttons */
+a.changeCategoryBtn {
+  border: 2px solid #BCBEC0;
+  border-radius: 10px;
+  font-size: 22px;
+  padding: 8px 22px;
+  margin-right: 20px;
+  text-transform: uppercase;
+  color: black;
+}
+
+
+a.changeCategoryBtn.demandCategory {
+  border-color: #CE4984;
+}
+
+a.changeCategoryBtn.benefitsCategory {
+  border-color: #32AEC4;
+}
+
+a.changeCategoryBtn.supportCategory {
+  border-color: #0A6AC2;
+}
+
+a.changeCategoryBtn.healthCategory {
+  border-color: #F8931F;
+}
+
+a.changeCategoryBtn.summerCategory {
+  border-color: #E6D23E;
+}
+
+a.changeCategoryBtn.stemCategory {
+  border-color: #563B7F;
+}
+
+.buttonRow {
+  position: absolute;
+  left: 341px;
+  top: 24px;
+}
+
+.download-arrow {
+  left: -6px;
+  position: relative;
+  top: -1px;
+}
+
+.extra-btns {
+  width: 125px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: -3px;
+}
+
+.extra {
+  text-transform: uppercase;
+  position: relative;
+  display: block;
+}
+
+.secondaryOptionBar .extra {
+  display: inline-block;
+}
+
+.site a:visited.extra.fact-download,
+.site a.extra.fact-download,
+.site a:visited.extra.news-download,
+.site a.extra.news-download {
+  color: #043D58;
+}
+
+/* Summer end of the line changes */
+.secondaryOptionBar .buttonRow { 
+  width: 920px;
+}
+
+.masthead a.changeCategoryBtn.healthCategory {
+  margin-left: 12px;
+}
+
+.masthead a.changeCategoryBtn.summerCategory {
+  margin-right: 10px !important;
+}
+
+.masthead a.changeCategoryBtn.stemCategory {
+  margin-right: 20px !important;
+}
+
+.summer.news-download .download-arrow {
+  left: -3px;
+}
+
+/* End summer end of line changes */
+
+.optionBar {
+  background-color: #F9FAFB;
+  height: 78px;
+  z-index: 2;
+}
+
+.secondaryOptionBar {
+  height: 48px;
+}
+
+.secondaryOptionBar .buttonRow {
+  top: 9px; 
+  left: 218px;
+}
+
+.secondaryOptionBar a.changeCategoryBtn {
+  padding: 4px 22px 0px 22px;
+  height: 25px;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 7px;
+  margin-top: -1px;
+}
+
+.secondaryOptionBar .centeredContent {
+  height: 48px;
+}
+
+.secondaryOptionBar .download-arrow {
+  height: 12px;
+}
+
+.secondaryOptionBar .extra-btns {
+  font-size: 12px;
+  margin-top: 0;
+}
+
+.secondaryOptionBar.stuckTop {
+  top: 79px;
+}
+
+.secondaryOptionBar h4 {
+  font-size: 15px;
+  font-weight: bold;
+  position: relative;
+  left: 91px;
+  top: 17px;
+}
+
+span.starIcon {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  background-image: url('../img/star-icon-black.png');
+}
+
+.stemActiveCategory .stemCategory span.starIcon {
+  background-image: url('../img/star-icon-white.png');
+}
+
+
+#nation-nav-button {
+  display: none;
+}
+
+#nation-nav-button img {
+  float: left;
+  margin: 5px 20px 0 40px;
+}
+
+/*****************************************************************************/
+/*
+/* Supplemental Data (National page)
+/*
+/*****************************************************************************/
+#supplementalDataSection {
+  /* Below map */
+  clear: both;
+  padding-top: 9px;
+  margin-top: 20px;
+}
+
+.demandActiveCategory #supplementalDataSection,
+.benefitsActiveCategory #supplementalDataSection,
+.healthActiveCategory #supplementalDataSection,
+.summerActiveCategory #supplementalDataSection,
+.stemActiveCategory #supplementalDataSection {  
+  border-top: 2px solid #D4D5D5;
+}
+
+#supplementalDataSection > .title {
+  font-size: 24px;
+  margin-bottom: 1em;
+}
+
+.demandActiveCategory #supplementalDataSection > .title {
+   margin-bottom: 1.2em;
+}
+
+.supplementalData {
+  text-align: center;
+  width: 208px;
+  display: inline-block;
+  vertical-align: top;
+  border-right: none;
+}
+
+.pieChart {
+  border-right: 0;
+  margin-bottom: 5px;
+}
+
+#detail .pieChart {
+  padding-left: 28px;
+}
+
+
+.supplementalData.donutChart {
+  border-right: 1px dotted #A1A2A4;
+}
+
+.supplementalData.donutChart:last-child {
+  border-right: none;
+}
+
+.stemActiveCategory .supplementalData.donutChart text.bigNumber {
+  fill: black;
+}
+
+.supplementalData span {
+  display: block;
+  text-transform: uppercase;
+}
+
+.supplementalData span.right-arrow-chevron {
+  display: inline;
+  font-size: 40px;
+  vertical-align: top;
+  line-height: 11px;
+}
+
+.supplementalData span.title {
+  font-size: 21px;
+  font-weight: 600;
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+.supplementalData span.subtitle.girls {
+  font-size: 16px;
+  left: -42px;
+  position: relative;
+  top: -22px;
+}
+
+.supplementalData span.title.boys { 
+  font-size: 16px;
+  left: 42px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+
+.supplementalData span.subtitle {
+  font-size: 10px;
+  color: #AAB0B7;
+}
+
+.supplementalData span.moreInfoBtn {
+  font-size: 13px;
+  color: black;
+}
+
+.supplementalData.healthSpecialReport {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.supplementalData.healthSpecialReport img {
+  margin-left: -36px;
+  margin-top: 7px;
+}
+
+.supplementalData.summerSpecialReport img {
+  margin-left: 28px;
+  margin-top: 7px;
+}
+
+svg.bigNumberAndDonut text.bigNumber {
+  fill: rgba(112, 121, 130, 0.5);
+  font-size: 15px;
+}
+
+.highlightedQuestion svg.bigNumberAndDonut text.bigNumber {
+  fill: #000000;
+}
+
+svg.bigNumberAndDonut {
+}
+
+/*****************************************************************************/
+/*
+/* General Colors
+/*
+/*****************************************************************************/
+
+
+.dashboard-container {
+  background-color: #FEFEFC;
+}
+
+.demandActiveCategory .fillByCategory.demandCategory,
+/* Only needed for demand cuz that's the only one with grade filters */
+.demandActiveCategory #national .gradeCategory.fillByCategory.demandCategory {
+  background-color: #CE4984;
+  color: white;
+}
+
+.benefitsActiveCategory .fillByCategory.benefitsCategory {
+  background-color: #32AEC4;
+  color: white;
+}
+
+.supportActiveCategory .fillByCategory.supportCategory {
+  background-color: #0A6AC2;
+  color: white;
+}
+
+.healthActiveCategory .fillByCategory.healthCategory {
+  background-color: #F8931F;
+  color: white;
+}
+
+.summerActiveCategory .fillByCategory.summerCategory {
+  background-color: #E6D23E;
+  color: white;
+}
+
+.stemActiveCategory .fillByCategory.stemCategory {
+  background-color: #563B7F;
+  color: white;
+}
+
+.demandActiveCategory .colorByCategory.demandCategory,
+.demandActiveCategory .demandCategory .colorByCategory,
+.demand-section .colorByCategory,
+.demandActiveCategory #national .demandCategory .subHighlighted {
+  color: #CE4984;
+}
+
+.benefitsActiveCategory .colorByCategory.benefitsCategory,
+.benefitsActiveCategory .benefitsCategory .colorByCategory,
+.benefits-section .colorByCategory,
+.benefitsActiveCategory #national .benefitsCategory .subHighlighted {
+  color: #32AEC4;
+}
+
+
+.supportActiveCategory .colorByCategory.supportCategory,
+.supportActiveCategory .supportCategory .colorByCategory,
+.support-section .colorByCategory,
+.supportActiveCategory #national .supportCategory .subHighlighted {
+  color: #0A6AC2;
+}
+
+.healthActiveCategory .colorByCategory.healthCategory,
+.healthActiveCategory .healthCategory .colorByCategory,
+.health-section .colorByCategory,
+.healthActiveCategory #national .healthCategory .subHighlighted {
+  color: #F8931F;
+}
+
+.summerActiveCategory .colorByCategory.summerCategory,
+.summerActiveCategory .summerCategory .colorByCategory,
+.summer-section .colorByCategory,
+.summerActiveCategory #national .summerCategory .subHighlighted {
+  color: #E6D23E;
+}
+
+.stemActiveCategory .colorByCategory.stemCategory,
+.stemActiveCategory .stemCategory .colorByCategory,
+.stem-section .colorByCategory,
+.stemActiveCategory #national .stemCategory .subHighlighted {
+  color: #563B7F;
+}
+
+.showByCategory {
+  display: none;
+}
+
+.demandActiveCategory .showByCategory.demandCategory, 
+.benefitsActiveCategory .showByCategory.benefitsCategory, 
+.supportActiveCategory .showByCategory.supportCategory, 
+.healthActiveCategory .showByCategory.healthCategory, 
+.summerActiveCategory .showByCategory.summerCategory, 
+.stemActiveCategory .showByCategory.stemCategory {
+  display: inherit;
+}
+
+/*****************************************************************************/
+/*
+/* Popover (tooltip)
+/*
+/*****************************************************************************/
+#mapWrapper .popover .background {
+   fill:rgba(255,255,255,0.8);
+   stroke: rgba(226, 227, 228, 0.9);
+}
+
+#mapWrapper .popover, #mapWrapper .popover .background, #mapWrapper .popover * {
+  pointer-events: none;
+  display: inherit;
+}
+
+.popover-state-name {
+  fill: #2c3e50;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.popover-sub-text {
+  font-style: italic;
+  font-size: 12px;
+  font-weight: light;
+}
+
+.popover-national-average {
+  font-size: 12px;
+}
+
+.popover .popoverContainer .invertColor {
+  fill: #F9FAFB;
+}
+
+/*****************************************************************************/
+/*
+/* Question highlight
+/*
+/*****************************************************************************/
+#questionHighlightWrapper {
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+/*****************************************************************************/
+/*
+/* Question panel
+/*
+/*****************************************************************************/
+
+.site a.gradeCategory {
+  background: none;
+  border: 1px solid #D6D6D6;
+  border-radius: 5px;
+  color: rgba(112, 121, 130, 0.5);
+  font-size: 12px;
+  margin: 5px 0 0 5px;
+  padding: 3px 7px;
+  text-decoration: none;
+}
+
+.highlightedQuestion .gradeCategory {
+  color: #000;
+}
+
+.gradeLevelSelectors {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin: 7px 0 15px 0;
+}
+
+#questionsWrapper {
+  overflow-y: auto;
+  max-height: 610px;
+  overflow-x: hidden;
+  width: 294px;
+  position: relative;
+}
+
+/* 
+  Mozilla and IE specific heights for these stupid things
+  Not only do we have to find specific heights for each of them (think its time to learn flexbox)
+  but also have to redo it because of a bug with how firefox renders the height of the 
+  .questionsPanelContent.description incorrectly (and sporadically!)
+*/
+.demandActiveCategory #questionsWrapper {
+  max-height: 524px;
+}
+
+.benefitsActiveCategory #questionsWrapper {
+  max-height: 878px;
+}
+
+.supportActiveCategory #questionsWrapper {
+  max-height: 357px;
+}
+
+.healthActiveCategory #questionsWrapper {
+  max-height: 555px;
+}
+
+.summerActiveCategory #questionsWrapper {
+  max-height: 413px;
+}
+
+.stemActiveCategory #questionsWrapper {
+  max-height: 522px;
+}
+
+/* Web kit browsers, acting reasonable... */
+@media screen and (-webkit-min-device-pixel-ratio:0) {  
+  .demandActiveCategory #questionsWrapper {
+    max-height: 528px;
+  }
+
+  .benefitsActiveCategory #questionsWrapper {
+    max-height: 860px;
+  }
+
+  .supportActiveCategory #questionsWrapper {
+    max-height: 362px;
+  }
+
+  .healthActiveCategory #questionsWrapper {
+    max-height: 562px;
+  }
+
+  .summerActiveCategory #questionsWrapper {
+    max-height: 420px;
+  }
+
+  .stemActiveCategory #questionsWrapper {
+    max-height: 529px;
+  }
+}
+
+/* IE 10/11 */
+@media all and (-ms-high-contrast:none) {
+  .demandActiveCategory #questionsWrapper {
+    max-height: 521px;
+  }
+
+  .benefitsActiveCategory #questionsWrapper {
+    max-height: 875px;
+  }
+
+  .supportActiveCategory #questionsWrapper {
+    max-height: 354px;
+  }
+
+  .healthActiveCategory #questionsWrapper {
+    max-height: 552px;
+  }
+
+  .summerActiveCategory #questionsWrapper {
+    max-height: 410px;
+  }
+
+  .stemActiveCategory #questionsWrapper {
+    max-height: 519px;
+  }
+}
+
+.questionsPanelContent .description {
+  font-size: 14px;
+  line-height: 140%;
+  padding: 0 0 20px 0;
+}
+
+.healthActiveCategory .questionsPanelContent .description {
+  letter-spacing: -0.01em;
+}
+
+.questionsPanelContent hr {
+    border: 0;
+    box-shadow: -8px 1px 6px 0.5px rgba(10,10,10,0.1);
+    height: 1px;
+    width: 280px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(161,161,161,0.75), rgba(0,0,0,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(161,161,161,0.75), rgba(0,0,0,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(161,161,161,0.75), rgba(0,0,0,0)); 
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(161,161,161,0.75), rgba(0,0,0,0)); 
+}
+
+.questionsPanelContent .questionHeader:not(.highlightedQuestion), .cardBody  {
+  /* Removing Letter press effect as per Nicole's request */
+  /*text-shadow: 1px 1px rgba(255,255,255,0.8);*/
+}
+
+svg {
+  /* Removing Letter press effect as per Nicole's request */
+  /*text-shadow: 0px 0px rgba(255,255,255,0.8);*/
+}
+
+.less-info, .more-info {
+  text-transform: uppercase;
+}
+
+.more p.less-info {
+  font-size: 13px;
+}
+
+.demandActiveCategory p.more-info {
+  margin-top: 0;
+}
+
+.questionPanelQuestion .bigNumberAndDonut {
+  margin-bottom: 25px;
+}
+
+.supportActiveCategory p.more-info {
+  margin-top: 0;
+}
+
+.supportActiveCategory svg.questionSingleBarChart + p.more-info {
+  margin-top: 15px;
+}
+
+.question {
+  padding-top: 18px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.question span {
+  color: rgba(112, 121, 130, 0.5);
+  font-size: 14px;
+  margin-right: 5px;
+  position: relative;
+  top: -4px;
+}
+
+.question .subHighlighted span {
+  color: #000;
+} 
+
+.question img {
+  margin: 0 0 5px 45px;
+}
+
+.questionPanelQuestion {
+  margin-bottom: 20px;
+  width: 270px;
+  padding: 1px 1px 0 1px;
+  border-bottom: 1px solid #D8D9D8;
+}
+
+div:last-of-type.questionHolder div.questionPanelQuestion {
+  border-bottom: none;
+}
+
+.questionPanelQuestion .questionHeader {
+  font-size: 16px;
+  padding: 5px 5px 5px 12px;
+  background-color: none;
+}
+
+.highlightedQuestion .questionPanelQuestion .questionHeader {
+  font-size: 18px;
+}
+
+.highlightedQuestion .questionPanelQuestion {
+  border-radius: 5px;
+  background: #FFFFF6;
+  border: 1px solid #D8D9D8;
+  padding: 0;
+}
+
+.highlightedQuestion .questionBigTextNumber, .highlightedQuestion .questionBigTextUnit {
+  color: #2A384B;
+}
+
+
+
+/* styles for selected questionSingleBarChart on selected card */
+#national .cardChartValueBar {
+  fill: #88A3B0;
+}
+
+.benefitsCategory .subHighlighted .questionSingleBarChart text.invertColor {
+  fill: #ffffff;
+}
+
+#detail .questionSingleBarChart {
+  vertical-align: middle;
+  margin-top: -4px;
+}
+
+
+#national .cardChartBackgroundBar {
+  fill: #E2E3E4;
+}
+
+.subHighlighted .questionSingleBarChart text {
+  fill: #000000;
+}
+
+
+
+.questionSingleBarChart text {
+  font-size: 12px;
+}
+
+/* styles for bars on unselected cards */
+
+#national .questionHolder:not(.highlightedQuestion) .cardChartValueBar {
+  fill: #707982;
+  fill-opacity: 0.33;
+}
+
+#national .questionHolder:not(.highlightedQuestion) .questionSingleBarChart  {
+  fill: #6B7885;
+}
+
+#national .questionHolder:not(.highlightedQuestion) .questionSingleBarChart text {
+  fill-opacity: 0.5;
+}
+
+#national .questionHolder:not(.highlightedQuestion) .questionChart,
+#national .questionHolder:not(.highlightedQuestion) .questionChart .subHighlighted {
+  color: rgba(112, 121, 130, 0.33);
+}
+
+/* styles for unselected bars on selected card */
+#national .subHighlighted .cardChartBackgroundBar {
+  fill: #E2E3E4;
+}
+
+#national .subHighlighted .cardChartValueBar {
+  fill: #2D3E4F;
+}
+
+.background-extender {
+  clear: both;
+}
+
+/* greying out unselected cards */
+
+#national .questionHolder:not(.highlightedQuestion) .donutPart0 {
+  fill: rgba(112, 121, 130, 0.5);
+}
+
+#national .questionHolder:not(.highlightedQuestion) .donutPart1 {
+  fill: rgba(112, 121, 130, 0.33);
+}
+
+#detail .benefitsCategory .questionSingleBarChart text.invertColor {
+  fill: #ffffff;
+}
+
+
+
+
+/*****************************************************************************/
+/*
+/*  Boy / Girl Question Pie Chart
+/*
+/*****************************************************************************/
+
+
+.questionPieChartText {
+  display: inline-block;
+  position: relative;
+  margin-left: 15px;
+}
+
+.questionPieChartText .boyValue {
+  position: relative;
+  top:-35px;
+  display: block;
+
+}
+
+.questionPieChartText .girlValue {
+  top:-30px;
+  display: block;
+  color : #AAB0B7;
+}
+
+
+
+/*****************************************************************************/
+/*
+/*  List of Reason Question
+/*
+/*****************************************************************************/
+
+.questionReasonList {
+  padding:0 10px;
+  padding-bottom: 10px;
+}
+
+.questionReasonList li,
+.justTextCardText ol li {
+  text-indent: -20px;
+  padding-left: 20px;
+}
+
+/* For some reason the above has correct affect with ol's, not ul's... */
+
+.justTextCardText ul {
+  padding-left: 20px;
+}
+
+/*****************************************************************************/
+/*
+/*  Big Text Question
+/*
+/*****************************************************************************/
+
+.question span.questionBigTextNumber {
+  font-size: 50px;
+  letter-spacing: -1px;
+}
+
+.question div.questionBigTextYear {
+  margin-bottom: 10px;
+}
+
+.question span.questionBigTextUnit {
+  font-size: 20px;
+}
+
+
+/*****************************************************************************/
+/*
+/*  Donut Number Question
+/*
+/*****************************************************************************/
+
+.questionDonut {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.questionDonut div {
+  text-align: center;
+}
+
+/*****************************************************************************/
+/*
+/*  Supplemental Reason Div
+/*
+/*****************************************************************************/
+
+.supplementalData.reasonList {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  border-right: none;
+}
+
+.supplementalData.reasonList.notFirst {
+  margin-top: 15px;
+/*  padding-top:15px;*/
+}
+
+.supplementalData.reasonList.borderRight {
+  border-right: 1px dotted #A1A2A4;
+}
+
+.supplementalData.reasonList.halfWidth {
+  width: 49%;
+}
+
+.supplementalData.reasonList .reasonListTitle {
+  display: inline-block;
+  font-size: 21px;
+  margin: 0 0 10px 30px;
+  padding-right: 10px;
+  font-variant: small-caps;
+  text-transform: lowercase;
+  line-height: 21px;
+
+}
+
+div.supplementalData.reasonList .questionReasonList {
+  text-align: left;
+  font-size: 13px;
+  line-height: 24px;
+  margin-left: 39px;
+}
+
+div.supplementalData.reasonList.halfWidth {
+  width: 49%;
+}
+
+div.supplementalData.reasonList.leftSide {
+  border-right: 1px dotted #A1A2A4;
+}
+
+div.supplementalData.reasonList img {
+  padding-left: 32px;
+  display: inline-block;
+}
+
+#supplementalDataSection > div.title {
+  font-size: 21px;
+  margin-left: 79px;
+}
+
+#supplementalDataSection > div.title.stemCategory {
+  margin-left: 15px;
+  text-align: center;
+}
+
+.benefitsActiveCategory .supplementalData.donutChart {
+  width: 48%;
+  border-right: none;
+  border-left: 1px dotted #A1A2A4;
+  margin-top: 15px;
+  padding-top: 17px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.benefitsActiveCategory .supplementalData.donutChart span {
+  font-size: 60px;
+}
+
+.demandActiveCategory .supplementalData svg.bigNumberAndDonut text.bigNumber {
+  fill: #043D58;
+}
+
+.benefitsActiveCategory .supplementalData.donutChart text.bigNumber {
+  fill: #2A384B;
+}
+
+.benefitsActiveCategory .supplementalData.donutChart span.title {
+  font-size: 21px;
+  font-weight: lighter;
+  line-height: 21px;
+  margin: -5px 0 11px 0;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  margin-left: 21px;
+}
+
+hr.supplementalData.dottedHorizontalRule {
+  border-width: 0px;
+  border-style: dotted; /* Inset by default */
+  border-bottom: 1px dotted #A1A2A4;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  padding-top: 16px;
+}
+
+.benefitsActiveCategory .supplementalData span {
+  text-transform: none;
+  display: inline-block;
+}
+
+.benefitsActiveCategory .supplementalData span.entryText { 
+  vertical-align: top;
+  padding-left: 5px;
+  width: 200px;
+}
+
+.benefitsActiveCategory ol {
+    counter-reset: item;
+}
+
+.benefitsActiveCategory ol li { 
+  display: block;
+}
+
+#detail .cardChart ol {
+  counter-reset: item;
+}
+
+#detail .cardChart ol li { 
+  display: block;
+}
+
+ol li:before {
+    content: counter(item) ". ";
+    counter-increment: item;
+    font-weight: bold;
+}
+
+/*****************************************************************************/
+/*
+/* Select/combobox
+/*
+/*****************************************************************************/
+
+#selectWrapper {
+}
+
+select#dropdown {
+  display: none;
+}
+
+.ui-helper-hidden-accessible {
+  display: none;
+}
+
+.custom-combobox {
+  position: absolute;
+  top: 24px;
+  left: 174px;
+
+}
+
+/*sets location of drop down button */
+
+.custom-combobox-toggle {
+  height: 28px;
+  margin-top: -5px;
+  margin-left: -143px;
+  border-radius: 5px 0px 0px 5px;
+  background: #BDC3C7;
+  color:#fff;
+}
+
+input.custom-combobox-input {
+  color:#414042;
+}
+
+.custom-combobox-input {
+  padding-left: 25px;
+  padding-top: 2px;
+  text-indent: 15px;
+  font-size: 14px;
+  color: #333;
+  border:none;
+  border: 2px solid #E2E3E4;
+  font-family: Trebuchet MS;
+}
+
+/* sets width of search box */
+.ui-widget.ui-widget-content.ui-state-default.ui-corner-left.ui-autocomplete-input {
+  border-radius: 5px;
+  width:115px;
+  height:25px;
+  background: #fff;
+
+  /* Ellipsis stuff */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ui-widget.ui-widget-content.ui-state-default.ui-corner-left.ui-autocomplete-input.filled,
+html body .ui-menu .ui-style-focus,
+html body .ui-menu.ui-widget-content .ui-state-focus,
+html body .ui-menu .ui-menu-item a:hover{
+  /*background: #FFFADC;*/
+}
+
+#ui-id-1 {
+  width:500px;
+  max-height: 350px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 1000;
+  border-radius: 0;
+  border:1px solid #ccc;
+}
+
+.ui-menu .ui-menu-item a{
+font-size:13px;
+border-radius: none;
+border:none;
+cursor: pointer;
+}
+
+.ui-menu .ui-menu-item a:hover {
+  font-size:13px;
+  background: #FFF4A8;
+  border:none;
+  border-radius: none;
+}
+
+.custom-combobox-input:focus {
+
+} 
+
+.ui-menu-item {
+  font-size: 14px;
+  color: #333;
+  font-family: Trebuchet MS;
+}
+
+/*****************************************************************************/
+/*
+/* State page
+/*
+/*****************************************************************************/
+
+.background-fill {
+  background-color: #EDF0F0;
+  width: 10000px;
+  height: 100000px;
+  position: absolute;
+  margin-left: -1000px;
+  z-index: -9001;
+}
+
+/*sticky nav*/
+.stuckTop {
+  position: fixed;
+  top: 0;
+}
+
+#topTenRibbon {
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  margin-bottom: -28px;
+}
+
+
+.back-to-top {
+  top: 142px;
+  left: 940px;
+  cursor: pointer;
+  /*margin-left: 957px;*/
+  position: absolute;
+  visibility: hidden;
+}
+
+.section-accordion {
+  box-sizing: border-box;
+  background-color: #CE4984;
+  border: 0px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 27px;
+  font-weight: bolder;
+  height: 24px;
+  line-height: 18px;
+  padding-right: 0px;
+  padding-bottom: 2px;
+  width: 24px
+}
+
+.card {
+  background: #FEFCF3;
+  border: 1px solid #D5D8DC;
+  border-radius: 7px;
+  float: left;
+  height: 393px;
+  margin: 0 0 20px 15px;
+  width: 298px;
+}
+
+.cardChart {
+  padding: 20px 20px;
+}
+
+.justTextDemandParticipation p.justTextCardText {
+/*  background-color: #EDF0F0;
+  margin: -22px -25px -20px -21px;
+  padding: 53px 25px 201px 25px;*/
+  font-size: 16px;
+  line-height: 160%;
+}
+
+p.justTextCardText.justTextCentered {
+  text-align: center;
+}
+
+.cardChart.barriersToEnrollment p.justTextCardText {
+/*  padding-top: 25px;
+*/}
+
+.cardChart.barriersToEnrollment p.justTextCardText ul {
+  margin-top: 16px;
+}
+/* Couldn't get borders to be consistent across different states
+.cardChart.justTextDemandParticipation p.justTextCardText {
+  box-sizing: border-box;
+}
+
+.cardChart.justTextDemandParticipation p.justTextCardText {
+  border-top: 1px solid #34495E;
+  border-bottom: 1px solid #34495E;
+  padding-bottom: 66px;
+  margin-top: -21px;
+}
+*/
+
+.health-section div.cardHeader {
+  height: 87px;
+}
+
+.cardChart span {
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.cardChart span.questionBigTextNumber {
+  font-size: 50px;
+  line-height: 37px;
+}
+
+.fillCard svg.bigNumberAndDonut text.bigNumber {
+  font-size: 60px;
+}
+
+div.fillCard span.questionBigTextNumber {
+  display: inline-block;
+  width: 100%;
+  font-size: 90px;
+  text-align: center;
+  padding-top: 70px;
+}
+
+text.pieBigText {
+  fill : white;
+  font-size: 24px;
+}
+
+
+
+/* big text color */
+#detail .demandCategory span.questionBigTextNumber {
+  color: #CE4984;
+  letter-spacing: -5px;
+}
+#detail .benefitsCategory span.questionBigTextNumber {color: #32AEC4;}
+#detail .supportCategory span.questionBigTextNumber {color: #0A6AC2;}
+#detail .healthCategory span.questionBigTextNumber {color: #F8931F;}
+#detail .summerCategory span.questionBigTextNumber {color: #E6D23E;}
+#detail .stemCategory span.questionBigTextNumber {color: #563B7F;}
+
+/* card header color */
+.demandCategory   .cardHeader {background-color: #CE4984;}
+.benefitsCategory .cardHeader {background-color: #32AEC4;}
+.supportCategory  .cardHeader {background-color: #0A6AC2;}
+.healthCategory  .cardHeader {background-color: #F8931F;}
+.summerCategory  .cardHeader {background-color: #E6D23E;}
+.stemCategory  .cardHeader {background-color: #563B7F;}
+
+/* accordion button color */
+
+.demand-section .section-accordion {background-color: #CE4984;}
+.benefits-section .section-accordion {background-color: #32AEC4;}
+.support-section  .section-accordion {background-color: #0A6AC2;}
+.health-section  .section-accordion {background-color: #F8931F;}
+.summer-section  .section-accordion {background-color: #E6D23E;}
+.stem-section  .section-accordion {background-color: #563B7F;}
+
+/* bar chart fill color */
+#detail .demandCategory .cardChartValueBar {fill: #CE4984;}
+#detail .benefitsCategory .cardChartValueBar {fill: #32AEC4;}
+#detail .supportCategory .cardChartValueBar {fill: #0A6AC2;}
+#detail .healthCategory .cardChartValueBar {fill: #F8931F;}
+#detail .summerCategory .cardChartValueBar {fill: #E6D23E;}
+#detail .stemCategory .cardChartValueBar {fill: #563B7F;}
+
+/* Pie Chart */
+#detail .demandCategory .piePart0 {fill: #CE4984;}
+#detail .demandCategory .piePart1 {fill: #E8A9C5;}
+
+/* donut fill color */
+#detail .demandCategory .donutPart0 {fill: #CE4984;}
+#detail .demandCategory .donutPart1 {fill: #EDF0F0;}
+#detail .benefitsCategory .donutPart0 {fill: #32AEC4;}
+#detail .benefitsCategory .donutPart1 {fill: #EDF0F0;}
+#detail .supportCategory .donutPart0 {fill: #0A6AC2;}
+#detail .supportCategory .donutPart1 {fill: #EDF0F0;}
+#detail .healthCategory .donutPart0 {fill: #F8931F;}
+#detail .healthCategory .donutPart1 {fill: #EDF0F0;}
+#detail .summerCategory .donutPart0 {fill: #E6D23E;}
+#detail .summerCategory .donutPart1 {fill: #EDF0F0;}
+#detail .stemCategory .donutPart0 {fill: #563B7F;}
+#detail .stemCategory .donutPart1 {fill: #EDF0F0;}
+/* card header color */
+.demandCategory   .cardChartBarText {fill: #CE4984;}
+.benefitsCategory .cardChartBarText {fill: #32AEC4;}
+.supportCategory  .cardChartBarText {fill: #0A6AC2;}
+.healthCategory  .cardChartBarText {fill: #F8931F;}
+.summerCategory  .cardChartBarText {fill: #E6D23E;}
+.stemCategory  .cardChartBarText {fill: #563B7F;}
+
+/* big number color */
+
+#detail .demandCategory svg.bigNumberAndDonut text.bigNumber {fill: #CE4984;}
+#detail .benefitsCategory svg.bigNumberAndDonut text.bigNumber {fill: #32AEC4;}
+#detail .supportCategory svg.bigNumberAndDonut text.bigNumber {fill: #0A6AC2;}
+#detail .healthCategory svg.bigNumberAndDonut text.bigNumber {fill: #F8931F;}
+#detail .summerCategory svg.bigNumberAndDonut text.bigNumber {fill: #E6D23E;}
+#detail .stemCategory svg.bigNumberAndDonut text.bigNumber {fill: #563B7F;}
+
+.cardHeader {
+  color: #fff;
+  font-size: 16px;
+  height: 65px;
+  padding: 12px 18px;
+  text-align: center;
+}
+
+.cardSectionHeader {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0 20px 0;
+  text-align: center;
+  /* Removing Letter press effect as per Nicole's request */
+  /*text-shadow: 1px 1px rgba(255,255,255,0.8);*/
+}
+
+#detail .cardChartBackgroundBar {
+  fill: #E2E4E4;
+}
+
+#cardsWrapper {
+  background-color: #EDF0F0;
+}
+
+.cardSection {
+  position: relative;
+}
+
+#detail #cardsWrapper div:nth-of-type(1) .cardSection hr {
+  border: none;
+  margin-top: 0;
+}
+
+#detail #cardsWrapper div {
+
+}
+
+#detail hr {
+  border: 0;
+  border-bottom: 2px solid #D5D8DC;
+  width: 924px;
+  margin: 0 0 5px 23px;
+}
+
+#detail h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 15px 0 10px 0;
+  text-align: center;
+}
+
+#detail {
+  background-color: #EDF0F0;
+}
+
+#detail .cardBody, #detail .cardBody .more p  {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+#detail .cardBody .more p:first-letter {
+  /* Was thinking about indenting the first line of more info... */
+  /*padding-left: 24px;*/
+}
+
+#detail .questionSingleBarChart text {
+  fill: #043D58;
+}
+
+#detail .questionBigText {
+  margin-top: 15px;
+}
+
+.centerMoreInfo {
+  text-align: center;
+}
+
+#detail .cardBody .centerMoreInfo .more p {
+  font-size: 16px;
+}
+
+
+hr {
+  border: 0;
+  border-bottom: 1px solid #D5D8DC;
+  height: 0;
+  margin: 0 0 16px 15px;
+  padding: 16px 0;
+  width: 935px;
+}
+
+.more img {
+  margin: 12px 7px 0 64px;
+}
+
+.more p {
+  font-size: 14px;
+  line-height: 140%;
+  padding-right: 14px;
+} 
+
+.projection {
+  text-align: center;
+  font-weight: bold;
+}
+
+.end-spacer {
+  height: 56px;
+}
+
+/* On bar charts - if the text gets flipped inside, make the color white */
+
+#national .questionSingleBarChart text.invertColor,
+#detail .questionSingleBarChart text.invertColor {
+  fill: white;
+}
+
+
+/* footnotes */
+
+#footnoteHolder {
+  font-size: 14px;
+  line-height: 24px;
+  padding: 10px 80px 56px 80px;
+}
+
+.bigCenteredText {
+  text-align: center;
+  margin-top: 56px;
+  font-size: 10px;
+}
+
+.cardChart .bigCenteredText span {
+  font-size: 72px;
+}
+
+.demand-section .cardChart .bigCenteredText span {
+    color: #CE4984;
+}
+
+.benefits-section .cardChart .bigCenteredText span {
+    color: #32AEC4;
+}
+
+.support-section .cardChart .bigCenteredText span {
+   color: #0A6AC2;
+}
+
+.health-section .cardChart .bigCenteredText span {
+   color: #F8931F;
+}
+
+.summer-section .cardChart .bigCenteredText span {
+   color: #E6D23E;
+}
+
+.stem-section .cardChart .bigCenteredText span {
+   color: #563B7F;
+}
+
+.cardCategory {
+  height: 423px;
+  width: 283px;
+  margin-right: 35px;
+
+  display: inline-block;
+}
+
+.doubleQuestionHolder .doubleQuestionContents {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.doubleQuestionContents .questionDottedLine {
+  margin-left: 0;
+}
+
+.doubleQuestionContents div.clickable span {
+  margin-right: 0;
+}
+
+.summerActiveCategory .doubleQuestionHolder .doubleQuestionContents {
+  margin-bottom: 22px;
+}
+
+#detail .doubleQuestionHolder img.questionDottedLine {
+  margin: 0 auto;
+}
+
+#detail .doubleQuestionHolder span {
+  font-weight: normal;  
+  font-size: 12px;
+  margin-right: 0;
+}
+
+#detail .doubleQuestionHolder strong {
+  font-weight: bold;
+}
+
+#detail .doubleQuestionHolder .more p {
+  line-height: 20px;
+  letter-spacing: -0.01em;
+}

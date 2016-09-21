@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>America After 3PM</title>
+    <meta name="viewport" content="width=device-width">
+   
+     <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="css/main.cc94.css"/>
+
+<link rel="stylesheet" href="css/print.7418.css" media="print"/>
+
+    <link rel="stylesheet" href="css/print_common.084e.css"/>
+  </head>
+  <body>
+    <div class="site">            
+      <link rel="stylesheet" href="css/print_hepa.8bdf.css"/>
+
+<div id="detail">
+  <div class="masthead printMasthead">
+    <div class="centeredContent mastheadContent"> 
+      <a class="extra" href="index.cfm">
+
+        <img class="logo" id="mainLogo" src="img/logo-special-report-health.gif" alt="">
+        <span class="logo-text">Healthy Eating &amp; Physical Activity</span>
+      </a>
+
+      <h1 class="mainTitle"><span class="stateName">New Mexico</span> After 3PM:</h1>
+      <h2><em>Kids on the Move</em></h2>
+      <div id="topTenRibbon"></div>
+
+      <p class="mainIntroText"></p>
+    </div>
+  </div>
+
+  <div class="content centeredContent printContent">
+    <div class="cardsWrapper firstHalfCards"></div>
+    <div class="clearfix"></div>
+  </div>
+
+
+  <div class="firstPageFooter pageFooter">
+    <img src="img/aalogo.svg" alt="Afterschool Alliance">
+  </div>
+
+  <div class="pagebreakBefore"></div>
+
+  <div class="spacer-above-logo"></div>
+  <div class="masthead printMasthead">
+    <div class="centeredContent mastheadContent"> 
+      <a class="extra" href="index.cfm">
+        <img class="logo" id="mainLogo" src="img/logo-special-report-health.gif" alt="">
+        <span class="logo-text">Healthy Eating &amp; Physical Activity</span>
+      </a>
+
+      <h1 class="mainTitle"><span class="stateName">New Mexico</span> After 3PM:</h1>
+      <h2><em>Kids on the Move</em></h2>
+      <div id="topTenRibbon"></div>
+    </div>
+  </div>
+
+  <div class="content centeredContent printContent">
+    <div class="cardsWrapper secondHalfCards"></div>
+    <div class="clearfix"></div>
+  </div>
+
+  <hr>
+
+  <div class="secondPageFooter pageFooter">
+  </div>
+</div>
+
+<!-- Begin templates -->
+<script type="text/template" id="print-footnoteTemplate">
+<div class="stupid-line"></div>
+<h3>About the Survey</h3>
+
+<p>The percentages and projected numbers of children and families in America After 3PM are based on survey responses from parents. The Afterschool Alliance contracted with Shugoll Research to collect the data. Nationally, 30,720 households were screened, and 13,709 households completed in-depth interviews via an online survey using a blend of national consumer panels. At least 200 households completed interviews in every state and the District of Columbia, between Feb. 28 and April 17, 2014. <%= state_footnote %></p>
+
+   <p>The Afterschool Alliance is a nonprofit public awareness and advocacy organization working to ensure that all children and youth have access to quality afterschool programs.</p>
+
+    <p>For additional information about America After 3PM, visit: WWW.AFTERSCHOOLALLIANCE.ORG/AA3PM.</p>
+</script>
+
+<script type="text/template" id="print-introTemplate">
+Afterschool programs play an important role in improving the health and wellness of our nation’s students. In <%= state_name %>, <%= projection_do_participate %> children participate in an afterschool program—and <%= projection_would_participate %> more children would be enrolled in a program if one were available to them. <%= state_name %> After 3PM: Kids on the Move, highlights some of the ways afterschool programs support families and students across the state—from offering kids healthy foods and opportunities to be physically active to helping parents keep their jobs.
+</script>
+
+<script type="text/template" id="cardsView-sectionTemplate">
+  <div class="cardSection <%= category %>-section cardSectionNumber<%= index %>">
+    <hr>
+    <div class="cardSectionHeader" ><%= title || 'Title Error' %>
+    </div>
+
+    <div class="cardSectionBody"></div>
+    
+  </div>
+  <div class="clearfix"></div>
+  <div class="end-spacer"></div>
+</script>
+
+<script type="text/template" id="cardsView-cardTemplate">
+  <div class="card">
+    <% if (title) { %>
+      <div class="cardHeader"><%= title %></div>
+    <% } %>
+
+    <div class="cardBody"></div>
+  </div>
+</script>
+<!-- End templates -->
+
+    </div>
+
+    
+<script src="js/vendor.ed92.js"></script>
+
+<script src="js/vendor2.0002.js"></script>
+
+<script src="js/scripts.2ac6.js"></script>
+
+  </body>
+</html>

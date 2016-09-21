@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>America After 3PM</title>
+    <meta name="viewport" content="width=device-width">
+   
+     <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+
+<!-- build:css(app) css/main.css -->
+<link rel="stylesheet" type="text/css" href="css/vendor/jquery-ui/smoothness/jquery-ui-1.10.4.custom.min.css" />
+<link rel="stylesheet" href="css/main.css">
+<!-- endbuild -->
+
+<!-- build:css(app) css/print.css -->
+<link rel="stylesheet" href="css/print.css" media="print">
+<!-- endbuild -->
+
+    <!-- build:css(app) css/print_common.css -->
+    <link rel="stylesheet" type="text/css" href="css/printCommon.css">
+      <!-- Can't put these print-report specific sheets in the actual article file (jekyll problems) -->
+    <link rel="stylesheet" type="text/css" href="css/printSTEMSpecialReport.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+    <div class="site">            
+      <div id="detail">
+  <div class="masthead printMasthead">
+    <div class="centeredContent mastheadContent"> 
+      <a class="extra" href="index.cfm">
+
+        <img class="logo" id="mainLogo" src="img/logo-stem.png" alt="">
+      </a>
+
+      <h1 class="mainTitle"><span class="stateName">New Mexico</span> After 3PM:</h1>
+      <h2><em>Full STEM Ahead</em></h2>
+      <div id="topTenRibbon"></div>
+
+      <p class="mainIntroText"></p>
+    </div>
+  </div>
+
+  <div class="content centeredContent printContent">
+    <div class="cardsWrapper firstHalfCards"></div>
+    <div class="clearfix"></div>
+  </div>
+
+
+  <div class="firstPageFooter pageFooter">
+    <img src="img/aalogo.svg" alt="Afterschool Alliance">
+  </div>
+
+  <div class="pagebreakBefore"></div>
+
+  <div class="spacer-above-logo"></div>
+  <div class="masthead printMasthead">
+    <div class="centeredContent mastheadContent"> 
+      <a class="extra" href="index.cfm">
+        <img class="logo" id="mainLogo" src="img/logo-stem.png" alt="">
+      </a>
+
+      <h1 class="mainTitle"><span class="stateName">New Mexico</span> After 3PM:</h1>
+      <h2><em>Full STEM Ahead</em></h2>
+      <div id="topTenRibbon"></div>
+    </div>
+  </div>
+
+  <div class="content centeredContent printContent">
+    <div class="cardsWrapper secondHalfCards"></div>
+    <div class="clearfix"></div>
+    <div class="finalCardsText">
+      <p>Afterschool STEM learning opportunities are essential to charge up student interest in STEM.  Ensuring that all children have access to afterschool programs will help ensure that everyone can participate in the modern economy and contribute to our shared prosperity.</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="secondPageFooter pageFooter">
+  </div>
+</div>
+
+<!-- Begin templates -->
+<script type="text/template" id="print-footnoteTemplate">
+<div class="stupid-line"></div>
+<h3>About the Survey</h3>
+
+<p>The percentages and projected numbers of children and families in America After 3PM are based on survey responses from parents. The Afterschool Alliance contracted with Shugoll Research to collect the data. Nationally, 30,720 households were screened, and 13,709 households completed in-depth interviews via an online survey using a blend of national consumer panels. At least 200 households completed interviews in every state and the District of Columbia, between Feb. 28 and April 17, 2014. <%= state_footnote %></p>
+
+<p>The Afterschool Alliance is a nonprofit public awareness and advocacy organization working to ensure that all children and youth have access to quality afterschool programs.</p>
+
+<p class="forAdditionalInformation">For additional information about <em>America After 3PM</em>, visit: <strong>WWW.AFTERSCHOOLALLIANCE.ORG/AA3PM.</strong></p>
+</script>
+
+<script type="text/template" id="print-introTemplate">
+Afterschool programs play a vital role in activating interest in science, technology, engineering and math (STEM) for our nation&rsquo;s students.  In <%= state_name %>, <%= projection_do_participate %> children participate in an afterschool program—and <%= projection_would_participate %> more children would be enrolled in a program if one were available to them. <em><%= state_name %> After 3PM: Full STEM Ahead</em> highlights some of the ways afterschool programs support students across the state in preparing for the future by offering kids STEM learning&nbsp;opportunities.
+</script>
+
+<script type="text/template" id="cardsView-sectionTemplate">
+  <div class="cardSection <%= category %>-section cardSectionNumber<%= index %>">
+    <hr>
+    <div class="cardSectionHeader" ><%= title || 'Title Error' %>
+    </div>
+
+    <div class="cardSectionBody"></div>
+    
+  </div>
+  <div class="clearfix"></div>
+  <div class="end-spacer"></div>
+</script>
+
+<script type="text/template" id="cardsView-cardTemplate">
+  <div class="card">
+    <% if (title) { %>
+      <div class="cardHeader"><%= title %></div>
+    <% } %>
+
+    <div class="cardBody"></div>
+  </div>
+</script>
+<!-- End templates -->
+
+    </div>
+
+    
+<!-- build:js(app) js/vendor.js -->
+<!-- bower:js -->
+<script src="_bower_components/jquery/dist/jquery.js"></script>
+<script src="_bower_components/underscore/underscore.js"></script>
+<script src="_bower_components/backbone/backbone.js"></script>
+<script src="_bower_components/d3/d3.js"></script>
+<script src="_bower_components/topojson/topojson.js"></script>
+<script src="_bower_components/q/q.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js(app) js/vendor2.js -->
+<script src="js/vendor/jquery.debounce.js"></script>
+<script src="js/vendor/jquery-ui-1.10.4.custom.min.js"></script>
+<script src="js/vendor/combobox_jquery_ui_no_tooltip.js"></script>
+<!-- endbuild -->
+
+<!-- build:js(app) js/scripts.js -->
+<script src="js/AA3/d3/d3.popover.js"></script>
+<script src="js/AA3/d3/d3.mapLegend.js"></script>
+<script src="js/AA3/d3/d3.barCharts.js"></script>
+<script src="js/AA3/d3/d3.usMap.js"></script>
+<script src="js/AA3/d3/d3.placeholder.js"></script>
+<script src="js/AA3/d3/d3.bigNumberAndDonut.js"></script>
+<script src="js/AA3/d3/d3.pieChart.js"></script>
+<script src="js/AA3/d3/d3.justText.js"></script>
+<script src="js/AA3/d3/d3.bigCenteredText.js"></script>
+
+<!-- Config -->
+<script src="js/AA3/config.js"></script>
+
+<!-- Utility -->
+<script src="js/AA3/stickynav.js"></script>
+<script src="js/AA3/utility.js"></script>
+
+<!-- Question specific factories -->
+<script src="js/AA3/d3/d3.questionSingleBarChart.js"></script>
+<script src="js/AA3/d3/d3.ThreeBarChartQuestion.js"></script>
+<script src="js/AA3/d3/d3.GradeLevelsThreeBarChartQuestion.js"></script>
+<script src="js/AA3/d3/d3.pieChartQuestion.js"></script>
+<script src="js/AA3/d3/d3.multipleReason.js"></script>
+<script src="js/AA3/d3/d3.multipleReasonQuestion.js"></script>
+<script src="js/AA3/d3/d3.bigText.js"></script>
+<script src="js/AA3/d3/d3.avgTimeQuestion.js"></script>
+<script src="js/AA3/d3/d3.bigNumberAndDonutQuestion.js"></script>
+<script src="js/AA3/d3/d3.bigDollarQuestion.js"></script>
+<script src="js/AA3/d3/d3.infoText.js"></script>
+<script src="js/AA3/d3/d3.basicListQuestion.js"></script>
+<script src="js/AA3/d3/d3.doubleQuestion.js"></script>
+
+
+<script src="js/AA3/view/D3View.backbone.js"></script>
+<script src="js/AA3/view/QuestionsView.js"></script>
+<script src="js/AA3/view/CardsView.js"></script>
+<script src="js/AA3/view/print/hepaSpecialReportCardsView.js"></script>
+<script src="js/AA3/view/print/STEMNewsReleaseCardsView.js"></script>
+
+<!-- Question-specific chart factories -->
+<script src="js/AA3/view/questions/p_of_children.js"></script>
+<script src="js/AA3/view/questions/p_of_children_alone.js"></script>
+<script src="js/AA3/view/questions/p_of_children_would_be_enrolled.js"></script>
+<script src="js/AA3/view/questions/p_of_parents_satisfied_child_program.js"></script>
+<script src="js/AA3/view/questions/p_of_parents_support_public_funding.js"></script>
+<script src="js/AA3/view/questions/p_of_boys_program.js"></script>
+<script src="js/AA3/view/questions/reason_not_enrolling_child.js"></script>
+<script src="js/AA3/view/questions/avg_hr_per_week_in_programs.js"></script>
+<script src="js/AA3/view/questions/avg_hr_per_week_alone.js"></script>
+<script src="js/AA3/view/questions/p_of_children_federal_asst.js"></script>
+<script src="js/AA3/view/questions/avg_dolllars_spent_per_week_program.js"></script>
+<script src="js/AA3/view/questions/p_of_parents_satisfied_program_safe.js"></script>
+<script src="js/AA3/view/questions/p_of_parents_satisfied_program_quality_of_care.js"></script>
+<script src="js/AA3/view/questions/p_of_parents_programs_excite_abt_learning.js"></script>
+<script src="js/AA3/view/questions/p_of_parents_programs_help_child_gain_skills.js"></script>
+<script src="js/AA3/view/questions/p_of_parents_programs_reduce_risky.js"></script>
+<script src="js/AA3/view/questions/p_of_parents_receive_public_funding.js"></script>
+<script src="js/AA3/view/questions/p_of_parents_working_parents_keep_jobs.js"></script>
+<script src="js/AA3/view/questions/p_of_parents_working_parents_peace.js"></script>
+<!-- Health -->
+<script src="js/AA3/view/questions/health_percentage.js"></script>
+<script src="js/AA3/view/questions/health_snacks_double.js"></script>
+<script src="js/AA3/view/questions/health_activity_double.js"></script>
+<!-- Stem -->
+<script src="js/AA3/view/questions/stem_percentage.js"></script>
+
+
+
+<script src="js/AA3/view/questions/p_family_child_summer_2013.js"></script>
+<script src="js/AA3/view/questions/p_family_want_summer.js"></script>
+<script src="js/AA3/view/questions/p_of_parents_agree_summer_academic.js"></script>
+<script src="js/AA3/view/questions/avg_hr_per_day_summer.js"></script>
+<script src="js/AA3/view/questions/avg_weeks_per_summer.js"></script>
+<script src="js/AA3/view/questions/avg_dollars_per_week_summer.js"></script>
+<script src="js/AA3/view/questions/p_of_parents_support_public_funding_summer.js"></script>
+
+<!-- Card chart factories -->
+<script src="js/AA3/view/cards/p_of_children.js"></script>
+<script src="js/AA3/view/cards/p_of_children_alone.js"></script>
+<script src="js/AA3/view/cards/p_of_children_would_be_enrolled.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_satisfied_child_program.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_support_public_funding.js"></script>
+<script src="js/AA3/view/cards/p_of_boys_program.js"></script>
+<script src="js/AA3/view/cards/reason_not_enrolling_child.js"></script>
+<script src="js/AA3/view/cards/avg_hr_per_week_in_programs.js"></script>
+<script src="js/AA3/view/cards/avg_hr_per_week_alone.js"></script>
+<script src="js/AA3/view/cards/p_of_children_federal_asst.js"></script>
+<script src="js/AA3/view/cards/avg_dolllars_spent_per_week_program.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_satisfied_program_safe.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_satisfied_program_quality_of_care.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_programs_excite_abt_learning.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_programs_help_child_gain_skills.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_programs_reduce_risky.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_receive_public_funding.js"></script>
+<script src="js/AA3/view/cards/p_of_children_grade_level.js"></script>
+<script src="js/AA3/view/cards/p_of_children_alone_grade_level.js"></script>
+<script src="js/AA3/view/cards/p_of_children_would_be_enrolled_grade_level.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_working_parents_peace.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_working_parents_keep_jobs.js"></script>
+<script src="js/AA3/view/cards/just_text_demand_unmet.js"></script>
+<script src="js/AA3/view/cards/just_text_demand_children_in_afterschool.js"></script>
+<script src="js/AA3/view/cards/ans_1_select_program.js"></script>
+<script src="js/AA3/view/cards/ans_1_type_activity.js"></script>
+<script src="js/AA3/view/cards/ans_1_program_provider.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_program_public_school_bldg.js"></script>
+
+<!-- Health -->
+<script src="js/AA3/view/cards/health_percentage.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_agree_should_provide_snacks.js"></script>
+<script src="js/AA3/view/cards/health_activity_double.js"></script>
+<script src="js/AA3/view/cards/health_snacks_double.js"></script>
+
+
+<!-- STEM -->
+<script src="js/AA3/view/cards/stem_percentage.js"></script>
+
+<script src="js/AA3/view/cards/p_family_child_summer_2013.js"></script>
+<script src="js/AA3/view/cards/p_family_want_summer.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_agree_summer_academic.js"></script>
+<script src="js/AA3/view/cards/avg_hr_per_day_summer.js"></script>
+<script src="js/AA3/view/cards/avg_dollars_per_week_summer.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_support_public_funding_summer.js"></script>
+
+<!-- supplemental data section -->
+<script src="js/AA3/view/supplemental/DonutMoreInfo.js"></script>
+<script src="js/AA3/view/supplemental/Pie.js"></script>
+<script src="js/AA3/view/supplemental/reasonList.js"></script>
+<script src="js/AA3/view/supplemental/percentageReasonList.js"></script>
+<script src="js/AA3/view/supplemental/bigCenteredText.js"></script>
+<script src="js/AA3/view/SupplementalDataView.js"></script>
+<script src="js/AA3/view/socialMediaView.js"></script>
+
+<!-- Pages -->
+<script src="js/AA3/pages/detail.js"></script>
+<script src="js/AA3/pages/national.js"></script>
+<script src="js/AA3/pages/print/health.js"></script>
+<script src="js/AA3/pages/print/stem.js"></script>
+
+
+<!-- Driver, go! -->
+<script src="js/main.js"></script>
+<!-- endbuild -->
+
+  </body>
+</html>

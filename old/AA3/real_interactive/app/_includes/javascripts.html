@@ -1,0 +1,161 @@
+
+<!-- build:js(app) js/vendor.js -->
+<!-- bower:js -->
+<script src="_bower_components/jquery/dist/jquery.js"></script>
+<script src="_bower_components/underscore/underscore.js"></script>
+<script src="_bower_components/backbone/backbone.js"></script>
+<script src="_bower_components/d3/d3.js"></script>
+<script src="_bower_components/topojson/topojson.js"></script>
+<script src="_bower_components/q/q.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js(app) js/vendor2.js -->
+<script src="js/vendor/jquery.debounce.js"></script>
+<script src="js/vendor/jquery-ui-1.10.4.custom.min.js"></script>
+<script src="js/vendor/combobox_jquery_ui_no_tooltip.js"></script>
+<!-- endbuild -->
+
+<!-- build:js(app) js/scripts.js -->
+<script src="js/AA3/d3/d3.popover.js"></script>
+<script src="js/AA3/d3/d3.mapLegend.js"></script>
+<script src="js/AA3/d3/d3.barCharts.js"></script>
+<script src="js/AA3/d3/d3.usMap.js"></script>
+<script src="js/AA3/d3/d3.placeholder.js"></script>
+<script src="js/AA3/d3/d3.bigNumberAndDonut.js"></script>
+<script src="js/AA3/d3/d3.pieChart.js"></script>
+<script src="js/AA3/d3/d3.justText.js"></script>
+<script src="js/AA3/d3/d3.bigCenteredText.js"></script>
+
+<!-- Config -->
+<script src="js/AA3/config.js"></script>
+
+<!-- Utility -->
+<script src="js/AA3/stickynav.js"></script>
+<script src="js/AA3/utility.js"></script>
+
+<!-- Question specific factories -->
+<script src="js/AA3/d3/d3.questionSingleBarChart.js"></script>
+<script src="js/AA3/d3/d3.ThreeBarChartQuestion.js"></script>
+<script src="js/AA3/d3/d3.GradeLevelsThreeBarChartQuestion.js"></script>
+<script src="js/AA3/d3/d3.pieChartQuestion.js"></script>
+<script src="js/AA3/d3/d3.multipleReason.js"></script>
+<script src="js/AA3/d3/d3.multipleReasonQuestion.js"></script>
+<script src="js/AA3/d3/d3.bigText.js"></script>
+<script src="js/AA3/d3/d3.avgTimeQuestion.js"></script>
+<script src="js/AA3/d3/d3.bigNumberAndDonutQuestion.js"></script>
+<script src="js/AA3/d3/d3.bigDollarQuestion.js"></script>
+<script src="js/AA3/d3/d3.infoText.js"></script>
+<script src="js/AA3/d3/d3.basicListQuestion.js"></script>
+<script src="js/AA3/d3/d3.doubleQuestion.js"></script>
+
+
+<script src="js/AA3/view/D3View.backbone.js"></script>
+<script src="js/AA3/view/QuestionsView.js"></script>
+<script src="js/AA3/view/CardsView.js"></script>
+<script src="js/AA3/view/print/hepaSpecialReportCardsView.js"></script>
+<script src="js/AA3/view/print/STEMNewsReleaseCardsView.js"></script>
+
+<!-- Question-specific chart factories -->
+<script src="js/AA3/view/questions/p_of_children.js"></script>
+<script src="js/AA3/view/questions/p_of_children_alone.js"></script>
+<script src="js/AA3/view/questions/p_of_children_would_be_enrolled.js"></script>
+<script src="js/AA3/view/questions/p_of_parents_satisfied_child_program.js"></script>
+<script src="js/AA3/view/questions/p_of_parents_support_public_funding.js"></script>
+<script src="js/AA3/view/questions/p_of_boys_program.js"></script>
+<script src="js/AA3/view/questions/reason_not_enrolling_child.js"></script>
+<script src="js/AA3/view/questions/avg_hr_per_week_in_programs.js"></script>
+<script src="js/AA3/view/questions/avg_hr_per_week_alone.js"></script>
+<script src="js/AA3/view/questions/p_of_children_federal_asst.js"></script>
+<script src="js/AA3/view/questions/avg_dolllars_spent_per_week_program.js"></script>
+<script src="js/AA3/view/questions/p_of_parents_satisfied_program_safe.js"></script>
+<script src="js/AA3/view/questions/p_of_parents_satisfied_program_quality_of_care.js"></script>
+<script src="js/AA3/view/questions/p_of_parents_programs_excite_abt_learning.js"></script>
+<script src="js/AA3/view/questions/p_of_parents_programs_help_child_gain_skills.js"></script>
+<script src="js/AA3/view/questions/p_of_parents_programs_reduce_risky.js"></script>
+<script src="js/AA3/view/questions/p_of_parents_receive_public_funding.js"></script>
+<script src="js/AA3/view/questions/p_of_parents_working_parents_keep_jobs.js"></script>
+<script src="js/AA3/view/questions/p_of_parents_working_parents_peace.js"></script>
+<!-- Health -->
+<script src="js/AA3/view/questions/health_percentage.js"></script>
+<script src="js/AA3/view/questions/health_snacks_double.js"></script>
+<script src="js/AA3/view/questions/health_activity_double.js"></script>
+<!-- Stem -->
+<script src="js/AA3/view/questions/stem_percentage.js"></script>
+
+
+
+<script src="js/AA3/view/questions/p_family_child_summer_2013.js"></script>
+<script src="js/AA3/view/questions/p_family_want_summer.js"></script>
+<script src="js/AA3/view/questions/p_of_parents_agree_summer_academic.js"></script>
+<script src="js/AA3/view/questions/avg_hr_per_day_summer.js"></script>
+<script src="js/AA3/view/questions/avg_weeks_per_summer.js"></script>
+<script src="js/AA3/view/questions/avg_dollars_per_week_summer.js"></script>
+<script src="js/AA3/view/questions/p_of_parents_support_public_funding_summer.js"></script>
+
+<!-- Card chart factories -->
+<script src="js/AA3/view/cards/p_of_children.js"></script>
+<script src="js/AA3/view/cards/p_of_children_alone.js"></script>
+<script src="js/AA3/view/cards/p_of_children_would_be_enrolled.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_satisfied_child_program.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_support_public_funding.js"></script>
+<script src="js/AA3/view/cards/p_of_boys_program.js"></script>
+<script src="js/AA3/view/cards/reason_not_enrolling_child.js"></script>
+<script src="js/AA3/view/cards/avg_hr_per_week_in_programs.js"></script>
+<script src="js/AA3/view/cards/avg_hr_per_week_alone.js"></script>
+<script src="js/AA3/view/cards/p_of_children_federal_asst.js"></script>
+<script src="js/AA3/view/cards/avg_dolllars_spent_per_week_program.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_satisfied_program_safe.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_satisfied_program_quality_of_care.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_programs_excite_abt_learning.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_programs_help_child_gain_skills.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_programs_reduce_risky.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_receive_public_funding.js"></script>
+<script src="js/AA3/view/cards/p_of_children_grade_level.js"></script>
+<script src="js/AA3/view/cards/p_of_children_alone_grade_level.js"></script>
+<script src="js/AA3/view/cards/p_of_children_would_be_enrolled_grade_level.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_working_parents_peace.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_working_parents_keep_jobs.js"></script>
+<script src="js/AA3/view/cards/just_text_demand_unmet.js"></script>
+<script src="js/AA3/view/cards/just_text_demand_children_in_afterschool.js"></script>
+<script src="js/AA3/view/cards/ans_1_select_program.js"></script>
+<script src="js/AA3/view/cards/ans_1_type_activity.js"></script>
+<script src="js/AA3/view/cards/ans_1_program_provider.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_program_public_school_bldg.js"></script>
+
+<!-- Health -->
+<script src="js/AA3/view/cards/health_percentage.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_agree_should_provide_snacks.js"></script>
+<script src="js/AA3/view/cards/health_activity_double.js"></script>
+<script src="js/AA3/view/cards/health_snacks_double.js"></script>
+
+
+<!-- STEM -->
+<script src="js/AA3/view/cards/stem_percentage.js"></script>
+
+<script src="js/AA3/view/cards/p_family_child_summer_2013.js"></script>
+<script src="js/AA3/view/cards/p_family_want_summer.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_agree_summer_academic.js"></script>
+<script src="js/AA3/view/cards/avg_hr_per_day_summer.js"></script>
+<script src="js/AA3/view/cards/avg_dollars_per_week_summer.js"></script>
+<script src="js/AA3/view/cards/p_of_parents_support_public_funding_summer.js"></script>
+
+<!-- supplemental data section -->
+<script src="js/AA3/view/supplemental/DonutMoreInfo.js"></script>
+<script src="js/AA3/view/supplemental/Pie.js"></script>
+<script src="js/AA3/view/supplemental/reasonList.js"></script>
+<script src="js/AA3/view/supplemental/percentageReasonList.js"></script>
+<script src="js/AA3/view/supplemental/bigCenteredText.js"></script>
+<script src="js/AA3/view/SupplementalDataView.js"></script>
+<script src="js/AA3/view/socialMediaView.js"></script>
+
+<!-- Pages -->
+<script src="js/AA3/pages/detail.js"></script>
+<script src="js/AA3/pages/national.js"></script>
+<script src="js/AA3/pages/print/health.js"></script>
+<script src="js/AA3/pages/print/stem.js"></script>
+
+
+<!-- Driver, go! -->
+<script src="js/main.js"></script>
+<!-- endbuild -->

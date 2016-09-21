@@ -1,0 +1,135 @@
+%!Adobe-FontList 1.16
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:TrebuchetMS
+FamilyName:Trebuchet MS
+StyleName:Regular
+MenuName:Trebuchet MS
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Trebuchet MS
+WritingScript:Roman
+OutlineFileName:\Trebuchet MS
+DataFormat:sfntResource
+ResourceID:4096
+FileLength:542927
+FileModTime:1207882800
+NameArray:0,Mac,4,Trebuchet MS
+NameArray:0,Win,1,Trebuchet MS
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:TrebuchetMS-Bold
+FamilyName:Trebuchet MS
+StyleName:Bold
+MenuName:Trebuchet MS
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Trebuchet MS Bold
+WritingScript:Roman
+OutlineFileName:\Trebuchet MS
+DataFormat:sfntResource
+ResourceID:4097
+FileLength:542927
+FileModTime:1207882800
+NameArray:0,Mac,4,Trebuchet MS Bold
+NameArray:0,Win,1,Trebuchet MS
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:TrebuchetMS-Italic
+FamilyName:Trebuchet MS
+StyleName:Italic
+MenuName:Trebuchet MS
+StyleBits:1
+WeightClass:400
+WidthClass:5
+AngleClass:1
+FullName:Trebuchet MS Italic
+WritingScript:Roman
+OutlineFileName:\Trebuchet MS
+DataFormat:sfntResource
+ResourceID:4098
+FileLength:542927
+FileModTime:1207882800
+NameArray:0,Mac,4,Trebuchet MS Italic
+NameArray:0,Win,1,Trebuchet MS
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Trebuchet-BoldItalic
+FamilyName:Trebuchet MS
+StyleName:Bold Italic
+MenuName:Trebuchet MS
+StyleBits:3
+WeightClass:700
+WidthClass:5
+AngleClass:1
+FullName:Trebuchet MS Bold Italic
+WritingScript:Roman
+OutlineFileName:\Trebuchet MS
+DataFormat:sfntResource
+ResourceID:4099
+FileLength:542927
+FileModTime:1207882800
+NameArray:0,Mac,4,Trebuchet MS Bold Italic
+NameArray:0,Win,1,Trebuchet MS
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:TrebuchetMS
+OutlineFileName:\Trebuchet MS
+ResourceID:15678
+MacStyle:0
+FileLength:542927
+FileModTime:1207882800
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:TrebuchetMS-Bold
+OutlineFileName:\Trebuchet MS
+ResourceID:15678
+MacStyle:1
+FileLength:542927
+FileModTime:1207882800
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:TrebuchetMS-Italic
+OutlineFileName:\Trebuchet MS
+ResourceID:15678
+MacStyle:2
+FileLength:542927
+FileModTime:1207882800
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Trebuchet-BoldItalic
+OutlineFileName:\Trebuchet MS
+ResourceID:15678
+MacStyle:3
+FileLength:542927
+FileModTime:1207882800
+%EndFont
+

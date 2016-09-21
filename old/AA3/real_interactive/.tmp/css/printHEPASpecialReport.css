@@ -1,0 +1,15 @@
+
+/* Center the row with two lines */
+.health-section.cardSectionNumber2 .cardSectionBody {
+	padding-left: 151px; /* Center on other cards */
+	/*padding-left: 175px;*/ /* Center with whole page */
+}
+
+/* Adjust hepa row of big number cards so that their text fits better */
+.health-section.cardSectionNumber1 .bigCenteredText {
+  margin: 16px 0 -15px 0;
+}
+
+#detail .health-section.cardSectionNumber1 .more p {
+  padding-left: 8px;
+}

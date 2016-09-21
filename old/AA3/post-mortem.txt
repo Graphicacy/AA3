@@ -1,0 +1,19 @@
+9 Steps for Holding a Successful Post-Mortem
+1. Ensure the project post-mortem is listed as a task on your project plan. When you review the project plan with the team at the beginning of the project, explain the concept so everyone knows what to expect at the end.
+2. Think about the outcomes of a successful post-mortem and work backwards to plan the meeting. Who should be invited? What are the “rules of engagement?” How will the results be used?
+3. Develop a set of possible questions as a guideline. These questions might refer to different phases of the project or different topic areas such as communication, planning, vendor management, or user feedback. Reading these questions gives participants a structure to help them think through the issues they want to bring up, so no key project areas are missed. See these Project Post-Mortem Review Questions. 
+4. Engage a facilitator and a scribe if possible. Especially for a large project, this provides a neutral presence so that everyone is on equal footing and in the same role as a participant.
+5. Invite the participants. Remind them of the purpose of the post-mortem and send the questions in advance. The goal is to make everyone feel comfortable, so provide enough information beforehand so participants know what to expect.
+6. State the “rules of engagement” either in your invitation or at the outset of the meeting. The goal is to maintain trust throughout the exercise; you may want to change these guidelines based on how well the team has worked together throughout the project. Sample guidelines:
+
+We all understand that the goal is improving the next project, so we’ll try to be as honest as we can.
+Everyone gets a chance to talk and all perceptions are equally valuable.
+Respectful listening is key. This is not the place for rebuttal or push-back.
+We’ll start each discussion section with “what went well” before we analyze what we could do better next time.
+7. Conduct the post-mortem. Make sure the room is comfortable and that participants won’t be disturbed. If possible, ask them not to multi-task or use laptops during the process, so everyone is equally engaged. Make sure you have flip charts and pens (or the high tech equivalent) to record key concepts.
+8. Compile the report. It’s helpful to have a summary section where you discuss the process, share major findings, and list the lessons the team can apply to the next project. In the appendix, you can share the details. Be sure to send all the participants a draft of the report to make sure their ideas were heard. Once the report is final, store it in a place that is easily accessible to everyone.
+9. Share the “lessons learned” with your organization. This kind of sharing helps all the project teams to do a better job — to learn from your successes and avoid some of your missteps.
+
+“A project is complete when it starts working for you, rather than you working for it.” — Scott Allen
+
+http://www.cdlib.org/cdlinfo/2010/11/17/the-project-post-mortem-a-valuable-tool-for-continuous-improvement/

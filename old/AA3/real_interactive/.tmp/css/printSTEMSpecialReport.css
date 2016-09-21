@@ -1,0 +1,72 @@
+.mainIntroText {
+  clear: both;
+}
+
+/* Center the row with two lines */
+.stem-section.cardSectionNumber1 .cardSectionBody,
+.demand-section.cardSectionNumber1 .cardSectionBody
+ {
+  padding-left: 151px; /* Center on other cards */
+  /*padding-left: 175px;*/ /* Center with whole page */
+}
+
+.demand-section {
+  margin-top: 190px !important;
+}
+
+.finalCardsText {
+  margin-bottom: 200px;
+  width: 590px;
+  padding-left: 175px; /* Center with whole page */
+  font-size: 1.3em;
+  line-height: 1.5em;
+  margin-top: -22px;
+}
+
+.cardSection {
+  /* WARNING: This is the max that the top can be pushed down before the logo goes over */
+  margin-top: 28px;
+}
+
+.stupid-line {
+  border-color: rgb(188, 189, 192) !important;
+}
+
+.printMasthead h2 {
+  font-size: 38px;
+  margin-top: 6px;
+  margin-bottom: -6px;
+}
+
+.firstPageFooter img {
+  margin: 0px 0 45px 50px;
+}
+
+.stem-section.cardSectionNumber2 .cardHeader {
+  height: 80px;
+  line-height: 20px;
+}
+
+.secondPageFooter h3 {
+  margin: 10px 0 11px 0 !important;
+}
+
+.secondPageFooter p {
+  line-height: 1.4em;
+}
+
+.forAdditionalInformation {
+  margin-top: 1em !important;
+  width: 866px !important;
+}
+
+/* Begin Hackz for smaller card section header */
+.cardSectionHeader {
+  font-size: 15px;
+}
+
+.printMasthead h1,
+.printMasthead h2 {
+  font-size: 34px !important;
+}
+/* End Hackz for smaller card section header */

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
+   
+    {% include stylesheets.html %}
+
+    <!-- build:css(app) css/print_common.css -->
+    <link rel="stylesheet" type="text/css" href="css/printCommon.css">
+      <!-- Can't put these print-report specific sheets in the actual article file (jekyll problems) -->
+    <link rel="stylesheet" type="text/css" href="css/printSTEMSpecialReport.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+    <div class="site">            
+      {{ content }}
+    </div>
+
+    {% include javascripts.html %}
+  </body>
+</html>
